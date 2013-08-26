@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="wrapper">
+    <div class="post">
+        <a href="{{ post.url }}">
+            <h2>{{ page.title }}</h2> 
+        </a>
+        {{ content }}
+    </div>
+
+    <div class="post-data">
+        <a class="timestamp button" href="{{ post.url }}">{{ page.date | date_to_string }}<span class="arrow right"></span></a>
+        <a class="fork" href="https://github.com/keyvanakbary/keyvanakbary.github.io/blob/master/{{ page.path }}" title="Fork me!"></a>
+    </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//keyvanakbary.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+        

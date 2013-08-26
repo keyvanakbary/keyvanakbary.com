@@ -1,0 +1,4 @@
+name: Keyvan Akbary
+markdown: redcarpet
+pygments: true
+permalink: /:title

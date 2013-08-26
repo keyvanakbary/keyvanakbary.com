@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="description" content="{{ page.description }}">
+        <link href="http://fonts.googleapis.com/css?family=Merriweather:300,300italic,400|Montserrat:400" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="/css/main.css" rel="stylesheet" type="text/css">
+        <link href="/css/syntax.css" rel="stylesheet" type="text/css">
+
+        <meta property="og:title" content="{{ page.title }}">
+        <meta property="og:description" content="{{ page.description }}">
+
+        <meta name="twitter:title" content="{{ page.title }}">
+        <meta name="twitter:description" content="{{ page.description }}">
+
+        <meta http-equiv="x-dns-prefetch-control" content="off">
+    </head>
+
+    <body >
+        <script>
+            try {
+                document.createEvent('TouchEvent')
+            } catch (e) {
+                (document.body || document.getElementsByTagName('body')[0]).className = 'touch-device';
+            }
+        </script>
+
+        <div id="header">
+            <form id="search-form">
+                <a href="#toggle" id="toggle"><span></span></a>
+                <span><button type="submit"><span class="arrow right dark"></span></button>
+                <input type="text" name="q" value="" placeholder="Buscar" /></span>
+            </form>
+            <div id="menu">
+                <a href="/">Home</a>
+            </div>
+        </div>
+        
+        <div id="author" class="rounded">
+            <a class="portrait" href="https://twitter.com/keyvanakbary">
+                <img src="/assets/images/keyvan2.png" alt="portrait">
+            </a>
+            <p class="name">Keyvan Akbary</p>
+            <p class="bio">Co-Founder of <a href="https://funddy.com" target="_blank">Funddy</a>. Software Journeyman and Aspiring Craftsman</p>
+        </div>
+        
+        <div id="page">
+            {{ content }}
+            <div class="wrapper">
+                <div class="post" id="footer">
+                    <p>Copyright © 2013</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <script src="/js/lunr.min.js"></script>
+        <script src="/search.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            function addListener(d, c) {
+                var d = d.split(' ');
+                for (var b = 0; b < d.length; b++) {
+                    if (window.addEventListener) {
+                        window.addEventListener(d[b], c, false)
+                    } else if (window.attachEvent) {
+                        window.attachEvent('on' + d[b], c)
+                    }
+                }
+            }
+
+            function viewportOffset() {
+                return (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop
+            }
+
+            function a() {
+                var b = document.getElementById('author'),
+                    d = parseInt(b.offsetHeight) + 100,
+                    e = window.innerHeight || document.documentElement.clientHeight,
+                    c = window.innerWidth || document.documentElement.clientWidth;
+                if (viewportOffset() >= 90 && c >= 1100 && e >= d) {
+                    b.style.position = 'fixed';
+                    b.style.marginTop = '10px';
+                } else {
+                    b.style.position = '';
+                    b.style.marginTop = '';
+                }
+            }
+
+            addListener('load resize scroll', a)
+
+            function search() {
+              var result = idx.search($('#search-form input').val());
+              if(result && result.length > 0) {
+                window.location.replace(result[0].ref);
+              } else alert('No se han encontrado resultados');
+            }
+
+            $(function() {
+              $('#search-form button').on('click', search);
+              $('#search-form input').on('keypress', function(e) {
+                if(e.which == 13) {
+                  e.preventDefault();
+                  search();
+                }
+              });
+            });
+        </script>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-25500345-1']);
+            _gaq.push(['_trackPageview']);
+        
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </body>
+</html>
