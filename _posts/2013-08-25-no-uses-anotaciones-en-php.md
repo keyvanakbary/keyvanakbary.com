@@ -2,7 +2,7 @@
 layout: post
 title: "¡No uses anotaciones en PHP!"
 description:
-    Las anotaciones son magia arcana, y la magia en el software es mala por naturaleza, lo es porque no sabemos como funciona exactamente. Es un agujero de conocimiento ideado por algún chaman de las cavernas.
+    Las anotaciones son algo mágico. La magia en el software es mala por definición, lo es porque no sabemos como funciona exactamente. Son un foco de malentendidos, provocan inesperados side effects y dependen de interpretes de terceros.
 ---
 
 Si utilizas un [ORM](http://en.wikipedia.org/wiki/Object-relational_mapping) como [Doctrine 2](http://www.doctrine-project.org/) te habrás percatado que utilizar anotaciones para mapear entidades es una practica sorprendentemente popular:
@@ -33,34 +33,28 @@ También el de utilizarlas como configuración en tus controladores en [Symfony 
 public function homeAction() {}
 {% endhighlight %}
 
-### ¿Y porqué no?
-Las anotaciones son **magia arcana**, y la magia en el software es mala por naturaleza, lo es porque no sabemos como funciona exactamente. Es un agujero de conocimiento ideado por algún **chaman de las cavernas**.
+### Utilizar anotaciones es una mala idea
+Las anotaciones son algo **mágico**. La magia en el software es mala por definición, lo es porque no sabemos como funciona exactamente. Son un foco de malentendidos, provocan inesperados **side effects** y dependen de interpretes de terceros.
 
-#### 1. No puedes testearlas
-El código de una anotación no está vinculado con tu lógica. Cuando vayas a testear su comportamiento lo vas a pasar mal.
+#### Depurarlas no es sencillo
+Debido a que **no son nativas del lenguaje** y funcionan de una forma poco habitual, requieren de intérpretes que normalmente bifurcan o interrumpen el flujo natural de tu código para ejecutarlas. Seguir la ejecución es cuanto menos una odisea.
 
-#### 2. No puedes depurarlas
-Precisamente como no es tu código ocurre que cuando tengas un problema vas a tener que estudiar los entresijos de tamaño milagro ingenieril para llegar al verdadero problema.
+#### Contaminan tu dominio
+La capa de dominio debe ser agnóstica a los detalles. Así pues, persistir o no tus entidades de dominio sobre una base de datos o mantenerlas en memoria es un detalle de infraestructura en que el dominio no es partícipe. Incrustar anotaciones (configuración) en tu dominio **es de las peores aberraciones que puedes cometer**, hacen que tu dominio sea **frágil y rígido** y no permiten una clara separación en capas.
 
-#### 3. No permiten una clara separación en capas
-A menudo se utilizan como configuración, mezclando las capas mas abstractas como el dominio con las mas concretas como la infraestructura haciendo que el código sea muy **frágil y rígido**. Hacerlo debería apestarte tanto como incrustar bloques de configuración XML en medio de tu lógica de negocio.
-
-#### 4. Dependes de la lógica de un tercero
-Tu lógica depende una librería que sepa interpretar dichas anotaciones. No te va a ser fácil modificar su comportamiento estándar o prescindir de sus servicios.
-
-#### 5. Dificultan la lectura
-Las anotaciones se mezclan con tu código, entorpeciendo su lectura y convirtiéndolo en un popurrí indescifrable.
+#### Dificultan la lectura
+No nos olvidemos, las anotaciones son comentarios y si estos ya de por si son una fuente de problemas, el hecho de que ejecuten cosas debería hacer saltar todas las alarmas. Las anotaciones se mezclan con tu código, entorpeciendo su lectura y convirtiéndolo en un popurrí indescifrable.
 
 ### Alternativas
-Dado que detrás de las anotaciones, en alguna cueva recóndita y oscura hay código, **siempre va a haber una forma de evitarlas**.
+Dado que detrás de las anotaciones, en algún lugar recóndito, hay código respaldándolas, **siempre va a haber una forma de evitarlas**.
 
-Por ejemplo, enrutar tus controladores con **Symfony 2** es tan sencillo como crear un fichero YAML con la configuración:
+Por ejemplo, en **Symfony 2** liberar a tus controlador de la configuración de enrutado es tan sencillo como crear un fichero YAML:
 
     home:
         pattern: /
         defaults: { _controller: Bundle:Controller:home }
 
-De la misma forma, en **Doctrine 2** puedes separar la lógica de tus entidades de la información de mapeo:
+De la misma forma, **Doctrine 2** permite separar tu dominio de los detalles de persistencia a través de ficheros de mapeo:
 
     Documents\User:
         db: documents
