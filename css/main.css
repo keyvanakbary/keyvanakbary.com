@@ -503,8 +503,18 @@ a.tag:after {
     width: 19px;
     background: url('/assets/images/sprite-fork.png') no-repeat 0 0;
     display: inline-block;
+    opacity: 0.3;
     vertical-align: middle;
     margin-left: 5px;
+
+    -webkit-transition: opacity .15s ease-out;
+       -moz-transition: opacity .15s ease-out;
+         -o-transition: opacity .15s ease-out;
+            transition: opacity .15s ease-out;
+}
+
+.fork:hover {
+    opacity: 1;
 }
 
 /*--BUTTONS--*/
@@ -627,14 +637,6 @@ a.tag:after {
         width: 100%;
         max-width: 100%;
         padding: 7.5% 0;
-    }
-    
-}
-
-@media only screen and (min-width: 641px) {
-
-    #tumblr_controls {
-        z-index: 7777 !important;
     }
     
 }
@@ -801,4 +803,55 @@ a.tag:after {
     .arrow.dark {background-position: -10px -5px;}
 
     .arrow.right.dark {background-position: -10px -15px;}
+}
+
+/*--SOCIAL--*/
+
+.social-links {
+    text-align: center;
+}
+
+.social {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+         -o-border-radius: 50%;
+            border-radius: 50%;
+    vertical-align: top;
+    border: 3px solid;
+    font-size: 2em;
+    margin-right: 2%;
+}
+
+.social i {
+    position: relative;
+    top: -3px;
+    line-height: 2em;
+}
+
+.social.twitter {
+    border-color: #77bfe6;
+    color: #77bfe6;
+}
+
+.social.github {
+    border-color: #777;
+    color: #777;
+}
+
+.social.mail {
+    border-color: #26ae90;
+    color: #26ae90;
+}
+
+.social.linkedin {
+    border-color: #309dd4;
+    color: #309dd4;
+}
+
+.social:hover {
+    color: #212121;
+    border-color: #212121;
 }
