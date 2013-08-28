@@ -95,20 +95,26 @@
             addListener('load resize scroll', a)
 
             function search() {
-              var result = idx.search($('#search-form input').val());
-              if(result && result.length > 0) {
-                window.location.replace(result[0].ref);
-              } else alert('No se han encontrado resultados');
+                var result = idx.search($('#search-form input').val());
+                if(result && result.length > 0) {
+                    window.location.replace(result[0].ref);
+                } else alert('No se han encontrado resultados');
             }
 
             $(function() {
-              $('#search-form button').on('click', search);
-              $('#search-form input').on('keypress', function(e) {
-                if(e.which == 13) {
-                  e.preventDefault();
-                  search();
-                }
-              });
+                $('#toggle').on('click', function(e) {
+                    e.preventDefault();
+                    if ($('body').attr('data-menu')) {
+                        $('body').removeAttr('data-menu');
+                    } else $('body').attr('data-menu', 'true');
+                });
+                $('#search-form button').on('click', search);
+                $('#search-form input').on('keypress', function(e) {
+                    if(e.which == 13) {
+                        e.preventDefault();
+                        search();
+                    }
+                });
             });
         </script>
         <script type="text/javascript">
