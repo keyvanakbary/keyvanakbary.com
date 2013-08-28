@@ -761,6 +761,9 @@ a.tag:after {
         width: 100%;
     }
 
+    .social-links {
+        font-size: 0.8em;
+    }
 }
 
 /*--RETINA GRAPHICS--*/
@@ -805,7 +808,7 @@ a.tag:after {
     .arrow.right.dark {background-position: -10px -15px;}
 }
 
-/*--SOCIAL--*/
+/*--ARROWS--*/
 
 .social-links {
     text-align: center;
