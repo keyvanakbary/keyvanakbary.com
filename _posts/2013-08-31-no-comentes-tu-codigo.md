@@ -104,7 +104,7 @@ public function homeAction() {}
 Debido a que son un tipo de comentario con comportamiento asociado (magia), [crean mas problemas de los que solucionan](/no-uses-anotaciones/).
 
 ### Comentarios aceptables
-En casos muy concretos algunos comentarios son beneficiosos o incluso necesarios. **El único comentario realmente útil es aquel que no escribes**.
+En casos muy concretos algunos comentarios son beneficiosos o incluso necesarios. Ten siempre presente que **el único comentario realmente útil es aquel que no escribes**.
 
 #### Comentarios legales
 {% highlight php startinline %}
