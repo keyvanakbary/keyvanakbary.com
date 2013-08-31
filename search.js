@@ -4,7 +4,7 @@ var docs =
 [ 
 {% for post in site.posts limit:20 %}
   {
-    "id"    : "http://localhost:4000{{ post.url }}",
+    "id"    : "http://keyvanakbary.com{{ post.url }}",
     "title"   : "{{ post.title }}",
     "content" : "{{ post.content | strip_html | strip_newlines | remove:'"'  }}"
   },
