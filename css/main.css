@@ -1,5 +1,5 @@
 /*--RESET--*/
-        
+
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@
 
 input, textarea, button {
     background: none;
-    
+
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
@@ -35,9 +35,9 @@ body {
 
 h1, h2, h3, h4, h5,
 #author .name {
-    
+
     font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    
+
     font-weight: 400;
     font-size: 17px;
     line-height: 150%;
@@ -45,9 +45,9 @@ h1, h2, h3, h4, h5,
 
 #menu a, #search-form, .button,
 .post-data .extra, .tags, .post-notes {
-    
+
     font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    
+
     font-weight: 400;
     font-size: 17px;
 }
@@ -60,7 +60,7 @@ a {
     color: #26ae90;
     font-weight: inherit;
     text-decoration: none;
-    
+
     -webkit-transition: color .15s ease-out, border-bottom-color .15s ease-out;
        -moz-transition: color .15s ease-out, border-bottom-color .15s ease-out;
          -o-transition: color .15s ease-out, border-bottom-color .15s ease-out;
@@ -100,7 +100,7 @@ h5 {font-size: 16px;}
 
 a h1, a h2, a h3, a h4, a h5 {
     font-weight: 400;
-    
+
     -webkit-transition: color .15s ease-out;
        -moz-transition: color .15s ease-out;
          -o-transition: color .15s ease-out;
@@ -149,7 +149,7 @@ pre, code {
     color: #c5c8c6;
     background: #212121;
     overflow-x: auto;
-    
+
     -webkit-border-radius: 4px;
        -moz-border-radius: 4px;
          -o-border-radius: 4px;
@@ -209,7 +209,7 @@ code {
 }
 
 /*--SEARCH--*/
-    
+
 #toggle {
     display: none;
 }
@@ -235,7 +235,7 @@ code {
     text-transform: uppercase;
     line-height: 13px;
     color: #212121;
-    
+
     -webkit-transition: width .2s ease-out;
        -moz-transition: width .2s ease-out;
          -o-transition: width .2s ease-out;
@@ -254,11 +254,11 @@ code {
     opacity: .5;
     display: inline-block;
     position: absolute;
-    
+
     -webkit-transition: padding-right .15s ease-out;
        -moz-transition: padding-right .15s ease-out;
          -o-transition: padding-right .15s ease-out;
-            transition: padding-right .15s ease-out;    
+            transition: padding-right .15s ease-out;
 }
 
 #search-form button:hover {
@@ -290,12 +290,12 @@ code {
     float: right;
     display: block;
     background: #eee;
-    
+
     -webkit-border-radius: 100%;
        -moz-border-radius: 100%;
          -o-border-radius: 100%;
             border-radius: 100%;
-    
+
     -webkit-transition: opacity .1s ease-out;
        -moz-transition: opacity .1s ease-out;
          -o-transition: opacity .1s ease-out;
@@ -337,7 +337,7 @@ code {
 }
 
 #author .bio {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 26px;
     color: #999;
 }
@@ -383,7 +383,7 @@ code {
     list-style: none;
     border: 1px solid #e3e3e3;
     overflow: hidden;
-    
+
     -webkit-border-radius: 4px;
        -moz-border-radius: 4px;
          -o-border-radius: 4px;
@@ -413,7 +413,7 @@ code {
 .timestamp > span {
     margin-left: 10px;
     font-size: 14px;
-    
+
     -webkit-transition: margin-left .15s ease-out;
        -moz-transition: margin-left .15s ease-out;
          -o-transition: margin-left .15s ease-out;
@@ -531,7 +531,7 @@ a.tag:after {
        -moz-border-radius: 4px;
          -o-border-radius: 4px;
             border-radius: 4px;
-    
+
     -webkit-transition: background-color .15s ease-out;
        -moz-transition: background-color .15s ease-out;
          -o-transition: background-color .15s ease-out;
@@ -553,19 +553,19 @@ a.tag:after {
 @media only screen and (max-width: 1100px) {
 
     /*--PAGE--*/
-    
+
     #page {
         padding: 0;
     }
-    
+
     /*--WRAPPER--*/
-    
+
     .wrapper:first-child {
         padding-top: 7.5%;
     }
 
     /*--AUTHOR--*/
-    
+
     #author {
         width: 80%;
         max-width: 640px;
@@ -577,113 +577,117 @@ a.tag:after {
         display: block;
         position: relative;
     }
-    
+
     #author .portrait {
         width: auto;
         margin: 0 auto;
         display: inline-block;
     }
-    
+
     #author .portrait img {
         margin: 0 auto;
         float: none;
     }
-    
+
     #author .name,
     #author .bio {
         width: 80%;
         margin: 0 auto;
     }
 
+    #author .bio {
+        margin-top: 20px;
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
-    
+
     /*--PAGE--*/
-    
+
     #page, .wrapper {
         width: 100%;
         max-width: 100%;
         margin: 0;
     }
-    
+
     /*--WRAPPER--*/
-    
+
     .wrapper {
         padding: 10% 0;
     }
-    
+
     /*--POSTS--*/
-    
+
     .post, .post-data, .post-notes,
     #disqus_thread {
         width: 80%;
         max-width: 640px;
         margin: 0 auto;
     }
-    
+
     .post-data {
         margin: 15px auto 0 auto;
     }
-    
+
     .post-notes {
         margin-top: 7.5%;
     }
-    
+
     /*--AUTHOR--*/
-    
+
     #author {
         width: 100%;
         max-width: 100%;
         padding: 7.5% 0;
     }
-    
+
 }
 
 @media only screen and (max-width: 640px) {
-    
+
     /*--RESET--*/
-    
+
     * {
         -webkit-text-size-adjust: none;
            -moz-text-size-adjust: none;
                 text-size-adjust: none;
     }
-    
+
     /*--BODY--*/
-    
+
     body {
         font-size: 16px;
     }
-    
+
     h1 {font-size: 28px;}
     h2 {font-size: 24px;}
     h3 {font-size: 20px;}
     h4 {font-size: 16px;}
     h5 {font-size: 15px;}
-    
+
     /*--AUTHOR--*/
-    
+
     #author .portrait img {
         height: 80px;
         width: 80px;
     }
-    
-    
-    
+
+
+
     /*--POST DATA--*/
-    
+
     .post-data .extra .label {
         display: none;
     }
-    
+
     .post-data .extra .icon {
         margin: 0 auto;
         display: block;
     }
-    
+
     /*--LIGHTBOX--*/
-    
+
     #lightbox_controls {
         opacity: 1;
     }
@@ -691,51 +695,51 @@ a.tag:after {
 }
 
 @media only screen and (max-width: 640px) {
-    
+
     /*--MENU--*/
-    
+
     #menu {
         margin: 0;
         padding: 5% 10%;
         display: none;
     }
-    
+
     [data-menu='true'] #menu {
         border-top: 2px solid #eee;
         display: block;
     }
-    
+
     #menu a {
         margin: 0;
         display: block;
     }
-    
+
     /*--SEARCH FORM--*/
-    
+
     #toggle {
         padding: 9px;
         border-right: 2px solid #eee;
         display: inline-block;
         float: left;
     }
-    
+
     #toggle > span {
         height: 22px;
         width: 22px;
         background: url('/assets/images/sprite-toggle.png') no-repeat 0 0;
         opacity: .65;
         display: block;
-    
+
         -webkit-transition: opacity .1s ease-out;
            -moz-transition: opacity .1s ease-out;
              -o-transition: opacity .1s ease-out;
                 transition: opacity .1s ease-out;
     }
-    
+
     #toggle:hover > span {
         opacity: .85;
     }
-    
+
     #search-form {
         max-height: 40px;
         width: 100%;
@@ -749,12 +753,12 @@ a.tag:after {
         height: 0;
         width: 0;
     }
-    
+
     #search-form > span {
         display: block;
         overflow: hidden;
     }
-    
+
     #search-form input,
     #search-form input:focus {
         width: 100%;
@@ -771,22 +775,22 @@ a.tag:after {
         only screen and (-moz-min-device-pixel-ratio: 2),
         only screen and (-o-min-device-pixel-ratio: 2),
         only screen and (min-device-pixel-ratio: 2) {
-    
+
     /*--TOGGLE--*/
-    
+
     #toggle > span {
         background-position: 0 -11px;
-        
+
         -webkit-background-size: 22px 55px;
            -moz-background-size: 22px 55px;
                 background-size: 22px 55px;
     }
-    
+
     /*--ARROWS--*/
 
     .arrow {
         background-position: 0 -5px;
-        
+
         -webkit-background-size: 20px 25px;
            -moz-background-size: 20px 25px;
                 background-size: 20px 25px;
@@ -794,14 +798,14 @@ a.tag:after {
 
     .fork {
         background-position: 0 -22px;
-        
+
         -webkit-background-size: 19px 44px;
            -moz-background-size: 19px 44px;
                 background-size: 19px 44px;
     }
-    
+
     .arrow.right {background-position: 0 -15px;}
-    
+
     .arrow.dark {background-position: -10px -5px;}
 
     .arrow.right.dark {background-position: -10px -15px;}
