@@ -497,25 +497,6 @@ a.tag:after {
 
 .arrow.right.dark {background-position: -30px 0;}
 
-.fork {
-    height: 22px;
-    width: 19px;
-    background: url('/assets/images/sprite-fork.png') no-repeat 0 0;
-    display: inline-block;
-    opacity: 0.3;
-    vertical-align: middle;
-    margin-left: 5px;
-
-    -webkit-transition: opacity .15s ease-out;
-       -moz-transition: opacity .15s ease-out;
-         -o-transition: opacity .15s ease-out;
-            transition: opacity .15s ease-out;
-}
-
-.fork:hover {
-    opacity: 1;
-}
-
 /*--BUTTONS--*/
 
 .button {
