@@ -3,6 +3,8 @@ layout: post
 title: "¡No uses anotaciones!"
 description:
     Las anotaciones son algo mágico. La magia en el software es mala por definición, lo es porque no sabemos como funciona exactamente. Son un foco de malentendidos, provocan inesperados side effects y dependen de interpretes de terceros.
+redirect_from:
+    - /no-uses-anotaciones-en-php/
 ---
 
 Si utilizas un [ORM](http://en.wikipedia.org/wiki/Object-relational_mapping) como [Doctrine 2](http://www.doctrine-project.org/) te habrás percatado que utilizar anotaciones para mapear entidades es una practica sorprendentemente popular:

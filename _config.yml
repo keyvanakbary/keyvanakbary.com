@@ -1,3 +1,5 @@
+gems:
+  - jekyll-redirect-from
 name: Keyvan Akbary
 markdown: redcarpet
 pygments: true
