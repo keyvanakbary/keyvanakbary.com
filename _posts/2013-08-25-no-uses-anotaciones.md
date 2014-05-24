@@ -46,19 +46,23 @@ Dado que detrás de las anotaciones, en algún lugar recóndito, hay código res
 
 Por ejemplo, en **Symfony 2** liberar a tus controlador de la configuración de enrutado es tan sencillo como crear un fichero YAML:
 
-    home:
-        pattern: /
-        defaults: { _controller: Bundle:Controller:home }
+{% highlight yaml %}
+home:
+    pattern: /
+    defaults: { _controller: Bundle:Controller:home }
+{% endhighlight %}
 
 De la misma forma, **Doctrine 2** permite separar tu dominio de los detalles de persistencia a través de ficheros de mapeo:
 
-    Documents\User:
-        db: documents
-        collection: user
-        fields:
-            id:
-                id: true
-            name:
-                type: string
+{% highlight yaml %}
+Documents\User:
+    db: documents
+    collection: user
+    fields:
+        id:
+            id: true
+        name:
+            type: string
+{% endhighlight %}
 
 ¡Mucho mas claro! A la larga te aseguro que lo agradecerás.
