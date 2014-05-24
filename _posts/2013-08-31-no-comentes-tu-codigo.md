@@ -2,7 +2,7 @@
 layout: post
 title: "¡No comentes tu código!"
 description:
-    La causa mas común detrás de un comentario **es un código poco expresivo y pobre**. Limpiar tu código siempre te va a llevar menos tiempo que comentar lo que hace para que se entienda.
+    La causa mas común detrás de un comentario es un código poco expresivo y pobre. Limpiar tu código siempre te va a llevar menos tiempo que comentar lo que hace para que se entienda.
 ---
 
 > Every time you write a comment, you should grimace and feel the failure of your ability of expression - Robert C. Martin
