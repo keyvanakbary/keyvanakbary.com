@@ -13,7 +13,8 @@ El Principio de Sustitución de Liskov, o LSP (Liskov Substitution Principle), c
 
 La importancia de este principio se hace evidente cuando pensamos en las consecuencias de violarla.
 
-Piensa en que tenemos una función `f` que toma como argumento un tipo base `B`. Considera que el tipo `B` tiene un derivado `D`, que cuando se pasa a `f` se comporta de forma errónea. Es en este caso cuando podemos asegurar que `D` viola LSP.
+[Bárbara Liskov](http://en.wikipedia.org/wiki/Barbara_Liskov) describió por primera vez este principio en 1988
+> Piensa en que tenemos una función `f` que toma como argumento un tipo base `B`. Considera que el tipo `B` tiene un derivado `D`, que cuando se pasa a `f` se comporta de forma errónea. Es en este caso cuando podemos asegurar que `D` viola LSP.
 
 ## Ejemplo de violación de LSP
 Considera el siguiente código como parte de una aplicación
@@ -98,3 +99,28 @@ Aunque el cuadrado sea consistente con su definición, no lo es respecto a todos
 Entonces, ¿cual fué el problema? ¿acaso un cuadrado no *es un* rectángulo?
 
 Desde el punto de vista del autor de la función `g` parece que no. Desde el punto de vista de `g` el comportamiento del objeto `Square` no es consistente con el comportamiento de un objeto `Rectangle`. Desde el punto de vista del comportamiento `Square` definitivamente no es un `Rectangle`.
+
+## Heurísticas y convenciones
+Hay algunas heurísticas que te pueden ayudar a encontrar violaciones del principio de Liskov. Todas tienen que ver con clases derivadas que de alguna forma eliminan o corrompen la funcionalidad de las clases base.
+
+### Funciones degenerativas en derivadas
+{% highlight php startinline %}
+class Base {
+    public function f() {
+        //some code
+    }
+}
+
+class Derived extends Base {
+    public function f() {}
+}
+{% endhighlight %}
+
+El autor de `Derived` ha considerado que el método `f` no es necesario. Por desgracia, los usuarios que hagan uso de `Base` no saben que no deberían llamar al método `f`, esto es una clara violación de LSP.
+
+### Lanzar excepciones en derivadas
+Otra causa común de violación del LSP es el lanzar excepciones en clases derivadas cuyas clases base no lanzan. Si los usuarios de las clases base no esperan excepciones, añadirlas provocará que no sean sustituibles.
+
+#### Referencias
+- [Clean Code](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
+- [Agile Software Development](http://www.amazon.com/Software-Development-Principles-Patterns-Practices/dp/0135974445)
