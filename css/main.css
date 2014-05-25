@@ -151,10 +151,10 @@ pre {
     font: 400 15px/24px monospace;
     margin: 0 0 5% 0;
     padding: 15px 20px;
-    color: #c5c8c6;
-    background: #1d1f21;
     overflow-x: auto;
+}
 
+.highlight {
     -webkit-border-radius: 4px;
        -moz-border-radius: 4px;
          -o-border-radius: 4px;

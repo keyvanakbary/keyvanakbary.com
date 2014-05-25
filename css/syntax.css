@@ -1,13 +1,16 @@
-.highlight {}
-.highlight .hll {}
+.highlight {
+    color: #c5c8c6;
+    background: #1d1f21;
+}
 
+.highlight .hll {}
 .highlight .err, /* Error */
 .highlight .x,   /* Other */
 .highlight .w    /* Whitespace */
 { color: #8abeb7 }
 
 /* PUNCTUATION */
-.highlight .p, 			/* Punctuation */
+.highlight .p,          /* Punctuation */
 .highlight .p-Indicator /* Indicator */
 {}
 
@@ -106,7 +109,3 @@
 .highlight .o, /* Operator */
 .highlight .ow /* Word */
 { color: #8abeb7 }
-
-
-
-
