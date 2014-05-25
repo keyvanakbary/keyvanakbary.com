@@ -11,10 +11,10 @@ El Principio de Sustitución de Liskov, o LSP (Liskov Substitution Principle), c
 
 > Los subtipos deberían poder ser reemplazables por sus tipos base
 
-La importancia de este principio se hace evidente cuando pensamos en las consecuencias de violarla.
-
 [Bárbara Liskov](http://en.wikipedia.org/wiki/Barbara_Liskov) describió por primera vez este principio en 1988
-> Piensa en que tenemos una función `f` que toma como argumento un tipo base `B`. Considera que el tipo `B` tiene un derivado `D`, que cuando se pasa a `f` se comporta de forma errónea. Es en este caso cuando podemos asegurar que `D` viola LSP.
+> Lo que queremos es algo parecido a la siguiente propiedad sustitutiva: Si por cada objeto <code>O<sub>1</sub></code> de tipo `S` hay un objeto <code>O<sub>2</sub></code> de tipo `T` tal que todos los programas `P` estan definidos en términos de `T`, el comportamiento de `P` no cambia cuando <code>O<sub>1</sub></code> es sustituido por <code>O<sub>2</sub></code> siendo `S` un subtipo de `T`
+
+La importancia de este principio se hace evidente cuando pensamos en las consecuencias de violarla. Piensa en que tenemos una función `f` que toma como argumento un tipo base `B`. Considera que el tipo `B` tiene un derivado `D`, que cuando se pasa a `f` se comporta de forma incorrecta. Es en este caso cuando podemos asegurar que `D` no puede reemplazar a `B`.
 
 ## Ejemplo de violación de LSP
 Considera el siguiente código como parte de una aplicación
@@ -48,7 +48,7 @@ class Rectangle {
 
 Supongamos que el código funciona correctamente en diversos lugares de la aplicación. Alguien reclama una nueva funcionalidad, ahora existe la posibilidad de manipular **cuadrados** además de rectángulos.
 
-A menudo en el mundo de la POO la herencia se interpreta a través de relaciones del tipo *ES-UN*. Miremos como lo miremos, un cuadrado matemáticamente **es un** rectángulo. No es descabellado llegar a la conclusión de que en nuestro modelo un cuadrado debe extender de rectángulo.
+A menudo en el mundo de la programación orientada a objetos la herencia se interpreta a través de relaciones del tipo *ES-UN*. Miremos como lo miremos, un cuadrado matemáticamente **es un** rectángulo. No es descabellado llegar a la conclusión de que en nuestro modelo un cuadrado debe extender de rectángulo.
 
 {% highlight php startinline %}
 class Square extends Rectangle {
@@ -124,3 +124,4 @@ Otra causa común de violación del LSP es el lanzar excepciones en clases deriv
 #### Referencias
 - [Clean Code](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
 - [Agile Software Development](http://www.amazon.com/Software-Development-Principles-Patterns-Practices/dp/0135974445)
+- [Barbara Liskov Interview](http://www.infoq.com/interviews/barbara-liskov)
