@@ -9,7 +9,7 @@ El patrón builder entra dentro de la categoría de patrones de creación. Esto 
 
 > Abstrae el proceso de creación de un objeto complejo, centralizando dicho proceso en un único punto, de tal forma que el mismo proceso de construcción pueda crear representaciones diferentes.
 
-Las clases internas que participan en la construcción del objeto no forman parte del api público del *Builder*. El cliente no tiene porqué saber los detalles de cómo construir un objeto complejo. El uso de este patrón también alivia la congestión de métodos con muchos parámetros.
+Las clases internas que participan en la construcción del objeto no forman parte del api público del *Builder*. El cliente no tiene por qué saber los detalles de cómo construir un objeto complejo. El uso de este patrón también alivia la congestión de métodos con muchos parámetros.
 
 Por ejemplo, si disponemos de un objeto o *producto* cuya construcción es relativamente compleja, como una abstracta y deliciosa hamburguesa
 
