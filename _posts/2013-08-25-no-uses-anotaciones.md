@@ -46,7 +46,7 @@ No nos olvidemos, las anotaciones son comentarios y si estos ya de por si son un
 ### Alternativas
 Dado que detrás de las anotaciones, en algún lugar recóndito, hay código respaldándolas, **siempre va a haber una forma de evitarlas**.
 
-Por ejemplo, en **Symfony 2** liberar a tus controlador de la configuración de enrutado es tan sencillo como crear un fichero YAML:
+Por ejemplo, en **Symfony 2** liberar a tu controlador de la configuración de enrutado es tan sencillo como crear un fichero YAML:
 
 {% highlight yaml %}
 home:
