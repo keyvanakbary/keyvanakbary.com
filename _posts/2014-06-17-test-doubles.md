@@ -1,6 +1,12 @@
 ---
 layout: post
 title: "Test doubles"
+references:
+    - {title: "The Little Mocker", url: "http://blog.8thlight.com/uncle-bob/2014/05/14/TheLittleMocker.html"}
+    - {title: "Mocks Aren't Stubs", url: "http://martinfowler.com/articles/mocksArentStubs.html"}
+    - {title: "Test Doubles", url: "http://www.martinfowler.com/bliki/TestDouble.html"}
+    - {title: "xUnit Test Patterns", url: "http://amzn.to/1FYC4iI"}
+    - {title: "GOOS", url: "http://amzn.to/1u3YVTh"}
 ---
 
 De forma análoga al uso de dobles en Hollywood, los *test doubles* son un término genérico que hace referencia a cualquier caso en el que se reemplaza un objeto de producción con otro con el único objetivo de probar el código.
@@ -127,12 +133,3 @@ Un ejemplo típico de `Fake` son las [InMemoryTestDatabase](http://www.martinfow
 Los `Dummies`, `Stubs` y espías son sencillos de escribir, especialmente si cuentas con un IDE moderno. Por otro lado, escribir `Mocks` no lo es tanto. Librerías como [PHPUnit](http://phpunit.de/manual/3.0/en/mock-objects.html) o [Mockery](https://github.com/padraic/mockery) diluyen esta dificultad en un mar de adictivas DSLs. La facilidad con la que puedes escribir `Mocks` con ellas es un arma de doble filo que te puede hacer perder la visión del precio de añadirlos.
 
 Añadir más aserciones o espiar en la llamada tiene un coste mas elevado que el de la propia implementación, comunmente lo denominamos acoplamiento. Cada uno de los *test doubles* tiene un propósito y un contexto, a más detalle, mayor coste, mayor fragilidad.
-
-
-#### Referencias
-
-- [The Little Mocker](http://blog.8thlight.com/uncle-bob/2014/05/14/TheLittleMocker.html)
-- [Mocks Aren't Stubs](http://martinfowler.com/articles/mocksArentStubs.html)
-- [Test Doubles](http://www.martinfowler.com/bliki/TestDouble.html)
-- [xUnit Test Patterns](http://amzn.to/1FYC4iI)
-- [GOOS](http://amzn.to/1u3YVTh)

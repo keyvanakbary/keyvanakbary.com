@@ -8,6 +8,14 @@ layout: default
             <h2>{{ page.title }}</h2>
         </a>
         {{ content }}
+        {% if page.references %}
+            <h4>Referencias</h4>
+            <ul>
+            {% for reference in page.references %}
+                <li><a href="{{ reference.url }}">{{ reference.title }}</a></li>
+            {% endfor %}
+            </ul>
+        {% endif %}
     </div>
 
     <div class="post-data">

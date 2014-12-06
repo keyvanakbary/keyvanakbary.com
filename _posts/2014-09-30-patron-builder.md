@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Patrón Builder"
+references:
+    - {title: "Gang of Four", url: "http://amzn.to/1rYJuSn"}
 ---
 
 El patrón builder entra dentro de la categoría de patrones de creación. Esto significa que su uso esta ideado para construir objetos. La idea primigenia plasmada en el ya clásico [Gang of Four](http://amzn.to/1rYJuSn), **gira entorno a desacoplar el código de construcción del código de representación**.
@@ -198,7 +200,3 @@ $user = UserBuilder::aUser('keyvan', 'pass')
     ->withEmail('keyvan@example.com')
     ->build();
 {% endhighlight %}
-
-#### Referencias
-
-- [Gang of Four](http://amzn.to/1rYJuSn)

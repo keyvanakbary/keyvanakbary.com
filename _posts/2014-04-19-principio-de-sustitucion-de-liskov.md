@@ -3,6 +3,10 @@ layout: post
 title: "Principio de sustitución de Liskov"
 redirect_from:
     - /principio-de-substitucion-de-liskov/
+references:
+    - {title: "Clean Code", url: "http://amzn.to/1vXD2Jm"}
+    - {title: "Agile Software Development", url: "http://amzn.to/1u3ZgFw"}
+    - {title: "Barbara Liskov Interview", url: "http://www.infoq.com/interviews/barbara-liskov"}
 ---
 
 El principio de sustitución de Liskov, o LSP (Liskov Substitution Principle), corresponde a la sigla L dentro de los 5 principios [SOLID](http://wikipedia.com/SOLID) para la programación orientada a objetos.
@@ -120,9 +124,3 @@ El autor de `Derived` ha considerado que el método `f` no es necesario. Por des
 
 ### Lanzar excepciones en derivadas
 Otra causa común de violación del LSP es el lanzar excepciones en clases derivadas cuyas clases base no lanzan. Si los usuarios de las clases base no esperan excepciones, añadirlas provocará que no sean sustituibles.
-
-#### Referencias
-
-- [Clean Code](http://amzn.to/1vXD2Jm)
-- [Agile Software Development](http://amzn.to/1u3ZgFw)
-- [Barbara Liskov Interview](http://www.infoq.com/interviews/barbara-liskov)

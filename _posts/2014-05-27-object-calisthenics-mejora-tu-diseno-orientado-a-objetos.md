@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Object Calisthenics, mejora tu diseño orientado a objetos"
+references:
+    - {title: "Object Calisthenics First Thoughts", url: "http://www.markhneedham.com/blog/2008/11/06/object-calisthenics-first-thoughts/"}
+    - {title: "Object Calisthenics RTF", url: "http://www.xpteam.com/jeff/writings/objectcalisthenics.rtf"}
 ---
 
 Los conceptos que definen un buen diseño software son bien conocidos. Básicamente hay 7 propiedades que distinguen la calidad del software: **alta cohesión**, **bajo acoplamiento**, **no redundacia**, **encapsulación**, **testabilidad**, **legibilidad** y **foco**. El problema viene cuando tratas de ponerlo en práctica. Una cosa es saber que has de encapsular los datos, la implementación, el tipo, el diseño o la construcción y otra bien distinta es cómo hacerlo.
@@ -270,8 +273,3 @@ Esta regla es quizás la más difícil de transmitir, tampoco es tan clara de vi
 8 de estas 10 reglas son simples guías de cómo visualizar e implementar el santo grial de la programación orientada a objetos, **la encapsulación de los datos**. Como plus, otra nos ayuda con el entendimiento del polimorfismo y otra deja claro estrategias de nombrado que fuerzan mejores nombres. La idea general es la librar al código de duplicidad. Código que expresa de forma concisa abstracciones simples y elegantes para la complejidad accidental con la que lidiamos día a día.
 
 A largo plazo, encontrarás que estas sencillas reglas se contradicen unas a otras en algunas situaciones o que la aplicación estricta de las reglas perjudican el código. Bienvenido a la ingeniería, no hay balas de plata, todo se trata de analizar los tradeoffs. De todas formas, te recomiendo que experimentes con ellas. Emplea 20 horas y 1000 líneas de código siguiendo estas reglas de forma estricta. A lo mejor te descubres rompiendo viejos hábitos y cambiando reglas con las que has convivido a lo largo de toda tu carrera profesional...
-
-#### Referencias
-
-- [Object Calisthenics First Thoughts](http://www.markhneedham.com/blog/2008/11/06/object-calisthenics-first-thoughts/)
-- [Object Calisthenics RTF](http://www.xpteam.com/jeff/writings/objectcalisthenics.rtf)

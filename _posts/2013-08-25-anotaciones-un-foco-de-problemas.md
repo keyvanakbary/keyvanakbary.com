@@ -6,6 +6,8 @@ description:
 redirect_from:
     - /no-uses-anotaciones-en-php/
     - /no-uses-anotaciones/
+references:
+    - {title: "8 Lines of Code", url: "http://www.infoq.com/presentations/8-lines-code-refactoring"}
 ---
 
 Si utilizas un [ORM](http://en.wikipedia.org/wiki/Object-relational_mapping) como [Doctrine 2](http://www.doctrine-project.org/) te habrás percatado que utilizar anotaciones para mapear entidades es una practica sorprendentemente popular:
@@ -69,7 +71,3 @@ Documents\User:
 {% endhighlight %}
 
 ¡Mucho mas claro! A la larga te aseguro que lo agradecerás.
-
-#### Referencias
-
-- [8 Lines of Code](http://www.infoq.com/presentations/8-lines-code-refactoring)

@@ -3,6 +3,8 @@ layout: post
 title: "Comentar código, una mala idea"
 redirect_from:
     - /no-comentes-tu-codigo/
+references:
+    - {title: "Clean Code", url: "http://amzn.to/1vXD2Jm"}
 ---
 
 > Cada vez que escribes un comentario deberías sentir el fracaso de tu habilidad para expresarte — Robert C. Martin
@@ -143,7 +145,3 @@ private $time = 1000; // In seconds
 {% endhighlight %}
 
 En contadas ocasiones es necesario aclarar el código, comentar justo las partes que no son suficientemente claras esta justificado.
-
-#### Referencias
-
-- [Clean Code](http://amzn.to/1vXD2Jm)
