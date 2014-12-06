@@ -5,22 +5,20 @@ description: Co-Founder of Funddy. Software Journeyman and Aspiring Craftsman.
 ---
 
 {% for post in site.posts %}
-    {% if post.target == null %}
-        <div class="wrapper">
-            <div class="post">
-                <a href="{{ post.url }}">
-                    <h2>{{ post.title }}</h2>
-                </a>
-                {% if post.description %}
-                    {{ post.description }}
-                {% else %}
-                    {{ post.excerpt}}
-                {% endif %}
-            </div>
-
-            <div class="post-data">
-                <a class="timestamp button" href="{{ post.url }}">Leer más<span class="arrow right"></span></a>
-            </div>
+    <div class="wrapper">
+        <div class="post">
+            <a href="{{ post.url }}">
+                <h2>{{ post.title }}</h2>
+            </a>
+            {% if post.description %}
+                {{ post.description }}
+            {% else %}
+                {{ post.excerpt}}
+            {% endif %}
         </div>
-    {%  endif %}
+
+        <div class="post-data">
+            <a class="timestamp button" href="{{ post.url }}">Leer más<span class="arrow right"></span></a>
+        </div>
+    </div>
 {% endfor %}
