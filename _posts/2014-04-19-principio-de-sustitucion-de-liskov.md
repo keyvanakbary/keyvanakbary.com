@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Principio de Sustitución de Liskov"
+title: "Principio de sustitución de Liskov"
 redirect_from:
     - /principio-de-substitucion-de-liskov/
 ---
 
-El Principio de Sustitución de Liskov, o LSP (Liskov Substitution Principle), corresponde a la sigla L dentro de los 5 principios [SOLID](http://wikipedia.com/SOLID) para la programación orientada a objetos.
+El principio de sustitución de Liskov, o LSP (Liskov Substitution Principle), corresponde a la sigla L dentro de los 5 principios [SOLID](http://wikipedia.com/SOLID) para la programación orientada a objetos.
 
 > Los subtipos deberían poder ser reemplazables por sus tipos base
 
