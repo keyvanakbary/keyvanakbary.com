@@ -11,7 +11,11 @@ description: Co-Founder of Funddy. Software Journeyman and Aspiring Craftsman.
                 <a href="{{ post.url }}">
                     <h2>{{ post.title }}</h2>
                 </a>
-                {{ post.description }}
+                {% if post.description %}
+                    {{ post.description }}
+                {% else %}
+                    {{ post.excerpt}}
+                {% endif %}
             </div>
 
             <div class="post-data">

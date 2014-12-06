@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "Principio de responsabilidad única"
-description:
-    El principio de responsabilidad única es el primer principio del acrónimo SOLID para la programación Orientada a Objetos. “Un módulo o una función debe tener una y solo una responsabilidad, o lo que es lo mismo, debe tener una y solo una razón para cambiar.”
 ---
 
 El principio de responsabilidad única es el primer principio del acrónimo [SOLID](http://wikipedia.com/SOLID) para la programación Orientada a Objetos.
 
 > Un módulo o una función debe tener una y solo una responsabilidad, o lo que es lo mismo, debe tener una y solo una razón para cambiar.
+
+<!--more-->
 
 Más de una responsabilidad hace que el código sea dificil de leer, de testear y mantener. Es decir, hace que el código sea menos flexible, más rígido.
 

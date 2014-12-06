@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Test doubles"
-description:
-    De forma análoga al uso de dobles en Hollywood, los test doubles son un término genérico que hace referencia a cualquier caso en el que se reemplaza un objeto de producción con otro con el único objetivo de probar el código.
 ---
 
 De forma análoga al uso de dobles en Hollywood, los *test doubles* son un término genérico que hace referencia a cualquier caso en el que se reemplaza un objeto de producción con otro con el único objetivo de probar el código.
+
+<!--more-->
 
 Imaginemos que queremos probar una parte nuestro sistema que depende de la siguiente interfaz
 

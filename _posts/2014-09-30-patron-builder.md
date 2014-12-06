@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Patrón Builder"
-description:
-    El patrón builder entra dentro de la categoría de patrones de creación. Esto significa que su uso esta ideado para construir objetos. La idea primigenia plasmada en el ya clásico Gang of Four, gira entorno a desacoplar el código de construcción del código de representación.
 ---
 
 El patrón builder entra dentro de la categoría de patrones de creación. Esto significa que su uso esta ideado para construir objetos. La idea primigenia plasmada en el ya clásico [Gang of Four](http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612), **gira entorno a desacoplar el código de construcción del código de representación**.
+
+<!--more-->
 
 > Abstrae el proceso de creación de un objeto complejo, centralizando dicho proceso en un único punto, de tal forma que el mismo proceso de construcción pueda crear representaciones diferentes.
 

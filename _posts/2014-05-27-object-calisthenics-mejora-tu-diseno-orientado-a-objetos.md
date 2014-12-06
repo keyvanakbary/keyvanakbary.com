@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Object Calisthenics, mejora tu diseño orientado a objetos"
-description: |
-    Los conceptos que definen un buen diseño software son bien conocidos. Básicamente hay 7 propiedades que distinguen la calidad del software: alta cohesión, bajo acoplamiento, no redundacia, encapsulación, testabilidad, legibilidad y foco. El problema viene cuando tratas de ponerlo en práctica. Una cosa es saber que has de encapsular los datos, la implementación, el tipo, el diseño o la construcción y otra bien distinta es cómo hacerlo.
 ---
 
 Los conceptos que definen un buen diseño software son bien conocidos. Básicamente hay 7 propiedades que distinguen la calidad del software: **alta cohesión**, **bajo acoplamiento**, **no redundacia**, **encapsulación**, **testabilidad**, **legibilidad** y **foco**. El problema viene cuando tratas de ponerlo en práctica. Una cosa es saber que has de encapsular los datos, la implementación, el tipo, el diseño o la construcción y otra bien distinta es cómo hacerlo.
+
+<!--more-->
 
 # El reto
 Un ejercicio que te puede ayudar a interiorizar los principios de un buen diseño orientado a objetos en el *mundo real™* es seguir al pie de la letra las siguientes reglas:

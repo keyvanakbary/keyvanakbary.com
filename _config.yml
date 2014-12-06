@@ -6,3 +6,4 @@ highlighter: pygments
 permalink: /:title
 url: "http://keyvanakbary.com"
 description: Developer at MyBuilder. Co-Founder for Funddy. Aspiring Craftsman. Living in London.
+excerpt_separator: <!--more-->

@@ -4,6 +4,7 @@ title: "De que va esto del Software Craftsmanship"
 description:
     Estamos cansados de escribir mal código. Estamos cansados de avergonzarnos de nosotros mismos ante nuestra empresa por escribir código de mierda. Hemos cubierto el cupo de llamadas a media noche a nuestros clientes para reiniciar los sistemas. No queremos listas de bugs infinitas. No queremos contribuir a enmarañar y corromper el código aún más. Estamos cansados de hacer un trabajo mediocre. Queremos empezar a hacerlo bien.
 ---
+
 Me he tomado la libertad de traducir muy alegremente y con algunos cambios [el artículo de Uncle Bob sobre este tema](http://thecleancoder.blogspot.co.uk/2011/01/software-craftsmanship-what-it-all.html).
 
 <hr>
