@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "¡No uses anotaciones!"
+title: "Anotaciones, un foco de problemas"
 description:
     Las anotaciones son algo mágico. La magia en el software es mala por definición, lo es porque no sabemos como funciona exactamente. Son un foco de malentendidos, provocan inesperados side effects y dependen de interpretes de terceros.
 redirect_from:
     - /no-uses-anotaciones-en-php/
+    - /no-uses-anotaciones/
 ---
 
 Si utilizas un [ORM](http://en.wikipedia.org/wiki/Object-relational_mapping) como [Doctrine 2](http://www.doctrine-project.org/) te habrás percatado que utilizar anotaciones para mapear entidades es una practica sorprendentemente popular:
@@ -41,7 +42,7 @@ Debido a que **no son nativas del lenguaje** y funcionan de una forma poco habit
 La capa de dominio debe ser agnóstica a los detalles. Así pues, persistir o no tus entidades de dominio sobre una base de datos o mantenerlas en memoria es un detalle de infraestructura en que el dominio no es partícipe. Incrustar anotaciones (configuración) en tu dominio **es de las peores aberraciones que puedes cometer**, hacen que tu dominio sea **frágil y rígido** y no permiten una clara separación en capas.
 
 #### Dificultan la lectura
-No nos olvidemos, las anotaciones son comentarios y si estos ya de por si son una fuente de problemas, el hecho de que ejecuten cosas debería hacer saltar todas las alarmas. Las anotaciones se mezclan con tu código, entorpeciendo su lectura y convirtiéndolo en un popurrí indescifrable.
+No nos olvidemos, las anotaciones son comentarios y si estos ya de por si un [síntoma de un problema mayor](/comentar-codigo-una-mala-idea/), el hecho de que ejecuten cosas debería hacer saltar todas las alarmas. Las anotaciones se mezclan con tu código, entorpeciendo su lectura y convirtiéndolo en un popurrí indescifrable.
 
 ### Alternativas
 Dado que detrás de las anotaciones, en algún lugar recóndito, hay código respaldándolas, **siempre va a haber una forma de evitarlas**.
@@ -68,3 +69,7 @@ Documents\User:
 {% endhighlight %}
 
 ¡Mucho mas claro! A la larga te aseguro que lo agradecerás.
+
+#### Referencias
+
+- [8 Lines of Code](http://www.infoq.com/presentations/8-lines-code-refactoring)

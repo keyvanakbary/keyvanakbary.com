@@ -1,13 +1,15 @@
 ---
 layout: post
-title: "¡No comentes tu código!"
-description:
-    La causa mas común detrás de un comentario es un código poco expresivo y pobre. Limpiar tu código siempre te va a llevar menos tiempo que comentar lo que hace para que se entienda.
+title: "Comentar código, una mala idea"
+redirect_from:
+    - /no-comentes-tu-codigo/
 ---
 
 > Cada vez que escribes un comentario deberías sentir el fracaso de tu habilidad para expresarte — Robert C. Martin
 
 La causa mas común detrás de un comentario **es un código poco expresivo y pobre**. Limpiar tu código siempre te va a llevar menos tiempo que comentar lo que hace para que se entienda.
+
+<!--more-->
 
 ### Explícalo con código
 En algunas ocasiones es difícil comunicar a través del código. Por desgracia, muchos programadores han llegado a la conclusión de que la única manera de solventarlo es comentándolo. Este hecho es completamente falso, como puedes ver ¿prefieres esto?
