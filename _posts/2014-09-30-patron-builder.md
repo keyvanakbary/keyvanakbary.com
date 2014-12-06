@@ -3,7 +3,7 @@ layout: post
 title: "Patrón Builder"
 ---
 
-El patrón builder entra dentro de la categoría de patrones de creación. Esto significa que su uso esta ideado para construir objetos. La idea primigenia plasmada en el ya clásico [Gang of Four](http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612), **gira entorno a desacoplar el código de construcción del código de representación**.
+El patrón builder entra dentro de la categoría de patrones de creación. Esto significa que su uso esta ideado para construir objetos. La idea primigenia plasmada en el ya clásico [Gang of Four](http://amzn.to/1rYJuSn), **gira entorno a desacoplar el código de construcción del código de representación**.
 
 <!--more-->
 
@@ -201,4 +201,4 @@ $user = UserBuilder::aUser('keyvan', 'pass')
 
 #### Referencias
 
-- [Gang of Four](http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612)
+- [Gang of Four](http://amzn.to/1rYJuSn)

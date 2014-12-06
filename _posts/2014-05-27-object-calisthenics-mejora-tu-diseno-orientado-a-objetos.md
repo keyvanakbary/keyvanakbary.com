@@ -272,5 +272,6 @@ Esta regla es quizás la más difícil de transmitir, tampoco es tan clara de vi
 A largo plazo, encontrarás que estas sencillas reglas se contradicen unas a otras en algunas situaciones o que la aplicación estricta de las reglas perjudican el código. Bienvenido a la ingeniería, no hay balas de plata, todo se trata de analizar los tradeoffs. De todas formas, te recomiendo que experimentes con ellas. Emplea 20 horas y 1000 líneas de código siguiendo estas reglas de forma estricta. A lo mejor te descubres rompiendo viejos hábitos y cambiando reglas con las que has convivido a lo largo de toda tu carrera profesional...
 
 #### Referencias
+
 - [Object Calisthenics First Thoughts](http://www.markhneedham.com/blog/2008/11/06/object-calisthenics-first-thoughts/)
 - [Object Calisthenics RTF](http://www.xpteam.com/jeff/writings/objectcalisthenics.rtf)

@@ -145,4 +145,5 @@ private $time = 1000; // In seconds
 En contadas ocasiones es necesario aclarar el código, comentar justo las partes que no son suficientemente claras esta justificado.
 
 #### Referencias
-- [Clean Code](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
+
+- [Clean Code](http://amzn.to/1vXD2Jm)

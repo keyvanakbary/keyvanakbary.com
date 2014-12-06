@@ -38,5 +38,6 @@ Por desgracia, las necesidades cambian y los usuarios también, es por eso que e
 El principio de reponsabilidad única permite que nuestro código sea más flexible al cambio y por tanto nos ayuda a mantener el primer valor del software, el de la **facilidad al cambio**, alto.
 
 #### Referencias
-- [Clean Code](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
-- [Agile Software Development](http://www.amazon.com/Software-Development-Principles-Patterns-Practices/dp/0135974445)
+
+- [Clean Code](http://amzn.to/1vXD2Jm)
+- [Agile Software Development](http://amzn.to/1u3ZgFw)

@@ -134,5 +134,5 @@ Añadir más aserciones o espiar en la llamada tiene un coste mas elevado que el
 - [The Little Mocker](http://blog.8thlight.com/uncle-bob/2014/05/14/TheLittleMocker.html)
 - [Mocks Aren't Stubs](http://martinfowler.com/articles/mocksArentStubs.html)
 - [Test Doubles](http://www.martinfowler.com/bliki/TestDouble.html)
-- [xUnit Test Patterns](http://www.amazon.com/xUnit-Test-Patterns-Refactoring-Code/dp/0131495054)
-- [GOOS](http://www.amazon.com/Growing-Object-Oriented-Software-Guided-Tests/dp/0321503627)
+- [xUnit Test Patterns](http://amzn.to/1FYC4iI)
+- [GOOS](http://amzn.to/1u3YVTh)

@@ -122,6 +122,7 @@ El autor de `Derived` ha considerado que el método `f` no es necesario. Por des
 Otra causa común de violación del LSP es el lanzar excepciones en clases derivadas cuyas clases base no lanzan. Si los usuarios de las clases base no esperan excepciones, añadirlas provocará que no sean sustituibles.
 
 #### Referencias
-- [Clean Code](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
-- [Agile Software Development](http://www.amazon.com/Software-Development-Principles-Patterns-Practices/dp/0135974445)
+
+- [Clean Code](http://amzn.to/1vXD2Jm)
+- [Agile Software Development](http://amzn.to/1u3ZgFw)
 - [Barbara Liskov Interview](http://www.infoq.com/interviews/barbara-liskov)
