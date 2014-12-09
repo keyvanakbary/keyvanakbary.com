@@ -4,8 +4,8 @@ title: "Principio de sustitución de Liskov"
 redirect_from:
     - /principio-de-substitucion-de-liskov/
 references:
-    - {title: "Clean Code", url: "http://amzn.to/1vXD2Jm"}
-    - {title: "Agile Software Development", url: "http://amzn.to/1u3ZgFw"}
+    - {title: "Clean Code", url: "http://amzn.to/1ufbMlI"}
+    - {title: "Agile Software Development", url: "http://amzn.to/1w8pZpY"}
     - {title: "Barbara Liskov Interview", url: "http://www.infoq.com/interviews/barbara-liskov"}
 ---
 

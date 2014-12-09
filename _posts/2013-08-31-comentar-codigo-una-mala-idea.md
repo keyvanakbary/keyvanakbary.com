@@ -4,7 +4,7 @@ title: "Comentar código, una mala idea"
 redirect_from:
     - /no-comentes-tu-codigo/
 references:
-    - {title: "Clean Code", url: "http://amzn.to/1vXD2Jm"}
+    - {title: "Clean Code", url: "http://amzn.to/1ufbMlI"}
 ---
 
 > Cada vez que escribes un comentario deberías sentir el fracaso de tu habilidad para expresarte — Robert C. Martin

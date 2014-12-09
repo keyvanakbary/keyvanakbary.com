@@ -5,8 +5,8 @@ references:
     - {title: "The Little Mocker", url: "http://blog.8thlight.com/uncle-bob/2014/05/14/TheLittleMocker.html"}
     - {title: "Mocks Aren't Stubs", url: "http://martinfowler.com/articles/mocksArentStubs.html"}
     - {title: "Test Doubles", url: "http://www.martinfowler.com/bliki/TestDouble.html"}
-    - {title: "xUnit Test Patterns", url: "http://amzn.to/1FYC4iI"}
-    - {title: "GOOS", url: "http://amzn.to/1u3YVTh"}
+    - {title: "xUnit Test Patterns", url: "http://amzn.to/1zIzOKD"}
+    - {title: "GOOS", url: "http://amzn.to/1qoTT8S"}
 ---
 
 De forma análoga al uso de dobles en Hollywood, los *test doubles* son un término genérico que hace referencia a cualquier caso en el que se reemplaza un objeto de producción con otro con el único objetivo de probar el código.

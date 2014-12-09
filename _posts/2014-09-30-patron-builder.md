@@ -2,7 +2,7 @@
 layout: post
 title: "Patrón Builder"
 references:
-    - {title: "Gang of Four", url: "http://amzn.to/1rYJuSn"}
+    - {title: "Gang of Four", url: "http://amzn.to/1vIk2QL"}
 ---
 
 El patrón builder entra dentro de la categoría de patrones de creación. Esto significa que su uso esta ideado para construir objetos. La idea primigenia plasmada en el ya clásico [Gang of Four](http://amzn.to/1rYJuSn), **gira entorno a desacoplar el código de construcción del código de representación**.

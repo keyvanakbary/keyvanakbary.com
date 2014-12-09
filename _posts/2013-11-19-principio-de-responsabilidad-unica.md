@@ -2,8 +2,8 @@
 layout: post
 title: "Principio de responsabilidad única"
 references:
-    - {title: "Clean Code", url: "http://amzn.to/1vXD2Jm"}
-    - {title: "Agile Software Development", url: "http://amzn.to/1u3ZgFw"}
+    - {title: "Clean Code", url: "http://amzn.to/1ufbMlI"}
+    - {title: "Agile Software Development", url: "http://amzn.to/1w8pZpY"}
 ---
 
 El principio de responsabilidad única es el primer principio del acrónimo [SOLID](http://wikipedia.com/SOLID) para la programación Orientada a Objetos.
