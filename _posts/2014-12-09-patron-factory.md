@@ -5,7 +5,7 @@ references:
     - {title: "Gang of Four", url: "http://amzn.to/1vIk2QL"}
 ---
 
-Probáblemente uno de los patrones más utilizados en lenguajes de programación modernos. El patrón Factory, una variante actual de los patrones de creación definidos en [Gang of Four](http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612) como [Factory Method](http://en.wikipedia.org/wiki/Factory_method_pattern) y [Abstract Factory](http://en.wikipedia.org/wiki/Abstract_factory_pattern), **permite desacoplar la lógica de creación de forma centralizada**.
+Probablemente uno de los patrones más utilizados en lenguajes de programación modernos. El patrón Factory, una variante actual de los patrones de creación definidos en [Gang of Four](http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612) como [Factory Method](http://en.wikipedia.org/wiki/Factory_method_pattern) y [Abstract Factory](http://en.wikipedia.org/wiki/Abstract_factory_pattern), **permite desacoplar la lógica de creación de forma centralizada**.
 
 <!--more-->
 
@@ -199,4 +199,4 @@ class SnackStub implements Snack {
 }
 {% endhighlight %}
 
-No tengo porqué acoplar mi test a un producto real. Sabiendo que mi test va a probar la información que ofrece la máquina expendedora sobre un determinado producto, me basta con un generar un [Stub](/test-doubles/) para este caso concreto.
+No tengo por qué acoplar mi test a un producto real. Sabiendo que mi test va a probar la información que ofrece la máquina expendedora sobre un determinado producto, me basta con un generar un [Stub](/test-doubles/) para este caso concreto.
