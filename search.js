@@ -5,7 +5,7 @@ var docs =
 [ 
 {% for post in site.posts limit:20 %}
   {
-    "id"    : "http://keyvanakbary.com{{ post.url }}",
+    "id"    : "{{ post.url }}",
     "title"   : "{{ post.title }}",
     "content" : "{{ post.content | strip_html | strip_newlines | remove:'"'  }}"
   },

@@ -279,6 +279,11 @@ pre {
     position: absolute;
 }
 
+#author.floating {
+    position: fixed;
+    margin-top: 10px;
+}
+
 #author .portrait {
     display: block;
 }
