@@ -7,7 +7,7 @@ var docs =
   {
     "id"    : "{{ post.url }}",
     "title"   : "{{ post.title }}",
-    "content" : "{{ post.content | strip_html | strip_newlines | remove:'"'  }}"
+    "content" : "{% if post.description %}{{ post.description | strip_html | strip_newlines | remove:'"' }}{% else %}{{ post.excerpt | strip_html | strip_newlines | remove:'"'}}{% endif %}"
   },
 {% endfor %}
 ];
