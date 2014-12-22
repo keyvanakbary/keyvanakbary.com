@@ -164,7 +164,7 @@ class UserBuilder {
         $this->password = $password;
     }
 
-    private static function aUser($username, $password) {
+    public static function aUser($username, $password) {
         return new self($username, $password);
     }
 
