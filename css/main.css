@@ -814,6 +814,11 @@ a.tag:after {
     border: 3px solid;
     font-size: 2em;
     margin-right: 2%;
+
+    -webkit-transition: none;
+       -moz-transition: none;
+         -o-transition: none;
+            transition: none;
 }
 
 .social i {
