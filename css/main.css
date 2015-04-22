@@ -241,12 +241,26 @@ pre {
             transition: width .2s ease-out;
 }
 
+#search-box {
+    border: 2px solid #eee;
+    background: #fafafa;
+}
+
+#search-box input {
+    padding: 11px;
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 13px;
+    color: #212121;
+    width: 100%;
+}
+
 /* WEBKIT FIX :( */
 ::-webkit-input-placeholder {
     line-height: 16px;
 }
 
-#search-form button {
+#search-form button, #search-box button {
     right: 0;
     padding: 14px;
     line-height: 0;
@@ -260,12 +274,12 @@ pre {
             transition: padding-right .15s ease-out;
 }
 
-#search-form button:hover {
+#search-form button:hover, #search-box button:hover {
     opacity: .85;
     cursor: pointer;
 }
 
-#search-form:hover button {
+#search-form:hover button, #search-box:hover button {
     padding-right: 18px;
 }
 

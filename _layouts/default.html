@@ -29,13 +29,13 @@
         </script>
 
         <div id="header">
-            <form id="search-form">
+            <div id="search-form">
                 <a href="#toggle" id="toggle"><span></span></a>
                 <span>
-                    <button type="submit" id="search-button"><span class="arrow right dark"></span></button>
-                    <input type="text" id="search-input" name="q" value="" placeholder="Buscar" />
+                    <button data-role="search-button"><span class="arrow right dark"></span></button>
+                    <input type="text" data-role="search-input" placeholder="Buscar" />
                 </span>
-            </form>
+            </div>
             <div id="menu">
                 <a href="/">Home</a>
                 <a href="/acerca-de/">Acerca de</a>
@@ -130,13 +130,14 @@
 
                 function doSearch(e) {
                     e.preventDefault();
-                    searchFor(document.getElementById('search-input').value);
+                    searchFor(this.parentNode.querySelector('[data-role=search-input]').value);
                 }
 
                 function doSearchOnEnter(e) {
                     var ENTER_CODE = 13;
                     if (e.which === ENTER_CODE) {
-                        doSearch(e);
+                        e.preventDefault();
+                        searchFor(this.value);
                     }
                 }
 
@@ -145,8 +146,12 @@
                 window.addEventListener('scroll', relocateProfile);
 
                 listenOn('toggle', 'click', toggleHeader);
-                listenOn('search-button', 'click', doSearch);
-                listenOn('search-input', 'keypress', doSearchOnEnter);
+                [].forEach.call(document.querySelectorAll('[data-role=search-button]'), function(button) {
+                    button.addEventListener('click', doSearch, false);
+                });
+                [].forEach.call(document.querySelectorAll('[data-role=search-input]'), function(input) {
+                    input.addEventListener('keypress', doSearchOnEnter, false);
+                });
             }());
         </script>
         <script>
