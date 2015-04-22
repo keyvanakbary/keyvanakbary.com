@@ -2,6 +2,7 @@
 layout: page
 title: Keyvan Akbary
 description: Co-Founder of Funddy. Software Journeyman and Aspiring Craftsman.
+permalink: /acerca-de/
 redirect_from:
     - /sobre-mi/
 ---
