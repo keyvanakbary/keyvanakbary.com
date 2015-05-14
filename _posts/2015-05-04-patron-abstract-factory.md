@@ -67,7 +67,7 @@ class HelloWorldFileWriterTest extends PHPUnit_Framework_TestCase {
             )
         );
         
-        $writer->writeTo('irrelevant-file.txt')
+        $writer->writeTo('irrelevant-file.txt');
 
         $this->assertEquals('Hello World!', $file->data);
     }
