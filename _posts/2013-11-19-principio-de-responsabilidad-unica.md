@@ -6,7 +6,7 @@ references:
     - {title: "Agile Software Development", url: "http://amzn.to/1w8pZpY"}
 ---
 
-El principio de responsabilidad única es el primer principio del acrónimo [SOLID](http://wikipedia.com/SOLID) para la programación Orientada a Objetos.
+El principio de responsabilidad única es el primer principio del acrónimo [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) para la programación Orientada a Objetos.
 
 > Un módulo o una función debe tener una y solo una responsabilidad, o lo que es lo mismo, debe tener una y solo una razón para cambiar.
 
