@@ -1,5 +1,3 @@
-<?php
-
 class User {
     private $username;
     private $password;
@@ -29,3 +27,4 @@ class User {
         return new self($username, $password, $email, $name);
     }
 }
+

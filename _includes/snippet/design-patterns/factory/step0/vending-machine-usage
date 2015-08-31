@@ -1,0 +1,7 @@
+$m = new VendingMachine();
+assert($m->infoFor(1) == <<<INFO
+description: crunchy chips
+price: 1.2 euros
+INFO
+);
+

@@ -1,5 +1,3 @@
-<?php
-
 class UserBuilder {
     private $username;
     private $password;
@@ -31,3 +29,4 @@ class UserBuilder {
         return new User($this->username, $this->password, $this->email, $this->name);
     }
 }
+

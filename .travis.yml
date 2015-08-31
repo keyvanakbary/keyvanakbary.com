@@ -7,7 +7,11 @@ php:
     - 7.0
     - hhvm
 
-script: _includes/code/run.php
+before_script:
+    - curl -s http://getcomposer.org/installer | php
+    - php composer.phar install --dev
+
+script: bin/phpunit
 
 branches:
     only:

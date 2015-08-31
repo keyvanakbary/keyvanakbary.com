@@ -1,0 +1,15 @@
+class SnackFactory {
+    public function create($code) {
+        switch($code) {
+            case 0:
+                return new Chocolate;
+            case 1:
+                return new Chips;
+            case 2:
+                return new Sandwich;
+        }
+
+        throw new Exception('No snack for code ' . $code);
+    }
+}
+

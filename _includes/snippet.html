@@ -1,6 +1,6 @@
 {% highlight php startinline %}
     {% capture content %}
-        {% include code/{{ include.file }} %}
+        {% include snippet/{{ include.file }} %}
     {% endcapture %}
-    {{ content | remove:"<?php" }}
+    {{ content }}
 {% endhighlight %}

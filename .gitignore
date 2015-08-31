@@ -1,3 +1,6 @@
 _site
 .DS_Store
 *.sublime-*
+vendor/
+composer.lock
+bin/

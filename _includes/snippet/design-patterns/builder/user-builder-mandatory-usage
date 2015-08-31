@@ -1,0 +1,2 @@
+$user = UserBuilder::aUser('keyvan', 'pass')->build();
+
