@@ -1,0 +1,5 @@
+<?php
+
+$chef = new BurgerChef();
+$vegieBurger = $chef->makeBurger(new VeggieBurgerBuilder());
+$americanBurger = $chef->makeBurger(new AmericanBurgerBuilder());
