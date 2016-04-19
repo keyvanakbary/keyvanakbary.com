@@ -9,5 +9,5 @@ kramdown:
 highlighter: rouge
 permalink: /:title
 url: "http://keyvanakbary.com"
-description: Developer at MyBuilder. Co-Founder for Funddy. Aspiring Craftsman. Living in London.
+description: Spaniard leaving in London. Lead Developer at TransferWise. Built Funddy. Author of “Domain-Driven Design in PHP” book.
 excerpt_separator: <!--more-->
