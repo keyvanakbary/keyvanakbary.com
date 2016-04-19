@@ -12,7 +12,7 @@ references:
 
 Si utilizas un [ORM](http://en.wikipedia.org/wiki/Object-relational_mapping) como [Doctrine 2](http://www.doctrine-project.org/) te habrás percatado que utilizar anotaciones para mapear entidades es una practica sorprendentemente popular:
 
-{% highlight php startinline %}
+```php?start_inline=1
 /** @Document */
 class User
 {
@@ -22,17 +22,17 @@ class User
     /** @Field(type="string") */
     private $name;
 }
-{% endhighlight %}
+```
 
 También el de utilizarlas como configuración en tus controladores en [Symfony 2](http://symfony.com/):
 
-{% highlight php startinline %}
+```php?start_inline=1
 /**
  * @Route("/")
  * @Template("BlogBundle:Blog:home.html.twig")
  */
 public function homeAction() {}
-{% endhighlight %}
+```
 
 ### Utilizar anotaciones es una mala idea
 Las anotaciones son algo **mágico**. La magia en el software es mala por definición, lo es porque no sabemos como funciona exactamente. Son un foco de malentendidos, provocan inesperados **side effects** y dependen de interpretes de terceros.
@@ -51,15 +51,15 @@ Dado que detrás de las anotaciones, en algún lugar recóndito, hay código res
 
 Por ejemplo, en **Symfony 2** liberar a tu controlador de la configuración de enrutado es tan sencillo como crear un fichero YAML:
 
-{% highlight yaml %}
+```yaml
 home:
     pattern: /
     defaults: { _controller: Bundle:Controller:home }
-{% endhighlight %}
+```
 
 De la misma forma, **Doctrine 2** permite separar tu dominio de los detalles de persistencia a través de ficheros de mapeo:
 
-{% highlight yaml %}
+```yaml
 Documents\User:
     db: documents
     collection: user
@@ -68,6 +68,6 @@ Documents\User:
             id: true
         name:
             type: string
-{% endhighlight %}
+```
 
 ¡Mucho mas claro! A la larga te aseguro que lo agradecerás.

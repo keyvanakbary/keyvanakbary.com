@@ -14,18 +14,20 @@ El principio de responsabilidad única es el primer principio del acrónimo [SOL
 
 Más de una responsabilidad hace que el código sea dificil de leer, de testear y mantener. Es decir, hace que el código sea menos flexible, más rígido.
 
-### ¿Y qué es una responsabilidad?
+### ¿Y qué es una responsabilidad?
+
 Se trata de la audiencia de un determinado módulo o función, actores que reclaman cambios al software. Las responsabilidades son básicamente familias de funciones que cumplen las necesidades de dichos actores.
 
 En el siguiente ejemplo podemos identificar hasta 3 responsabilidades diferentes
-{% highlight php startinline %}
+
+```php?start_inline=1
 class Employee
 {
     public function calculatePay() { … } //Policy
     public function save() { … } //Architecture
     public function describeEmployee() { … } //Operations
 }
-{% endhighlight %}
+```
 
 1. Política de cálculos de salario
 2. Lógica de persitencia en la base de datos

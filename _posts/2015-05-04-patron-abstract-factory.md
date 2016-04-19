@@ -13,7 +13,7 @@ El patrón Abstract Factory, se encuentra dentro de los denominados patrones de 
 
 Consideremos el siguiente ejemplo. Un servicio que crea o sobreescribe el fichero que el usuario especifica con el ya clásico “Hello World!”
 
-{% highlight php startinline %}
+```php?start_inline=1
 class HelloWorldFileWriter {
     public function writeTo($filepath) {
         $file = new SplFileObject($filepath, 'w+');
@@ -23,13 +23,13 @@ class HelloWorldFileWriter {
 
 $writer = new HelloWorldFileWriter();
 $writer->writeTo('file.txt');
-{% endhighlight %}
+```
 
 Tiene un pequeño inconveniente, este código no se puede testear de forma unitaria, esto es, sin tener que crear un fichero realmente. El servicio esta acoplado directamente a la creación de `SplFileObject`.
 
 Podemos extraer la lógica de creación haciendo uso del patrón [Factory](/patron-factory/)
 
-{% highlight php startinline %}
+```php?start_inline=1
 class FileFactory {
     public function createFile($filename, $openMode) {
         return new SplFileObject($filename, $openMode);
@@ -51,11 +51,11 @@ class HelloWorldFileWriter {
 
 $writer = new HelloWorldFileWriter(new FileFactory());
 $writer->writeTo('file.txt');
-{% endhighlight %}
+```
 
 Haciendo uso de [Duck Typing](http://en.wikipedia.org/wiki/Duck_typing) y [Mockery](https://github.com/padraic/mockery) podemos reemplazar la abstracción `SplFileObject` por un [Test Double](/test-doubles/) espía en nuestros tests
 
-{% highlight php startinline %}
+```php?start_inline=1
 class HelloWorldFileWriterTest extends PHPUnit_Framework_TestCase {
     /**
      * @test
@@ -66,7 +66,7 @@ class HelloWorldFileWriterTest extends PHPUnit_Framework_TestCase {
                 $file = new FileSpy()
             )
         );
-        
+
         $writer->writeTo('irrelevant-file.txt');
 
         $this->assertEquals('Hello World!', $file->data);
@@ -87,21 +87,22 @@ class FileSpy {
         $this->data = $data;
     }
 }
-{% endhighlight %}
+```
 
 ## Multiples Implementaciones
 Ahora bien, la abstracción `SplFileObject` [no se introdujo hasta la versión de PHP 5.1.0](http://php.net/manual/en/class.splfileobject.php). Como ejemplo ilustrativo, imaginemos que algunos de nuestros clientes siguen utilizando la versión de PHP 5.0.0. Podemos crear una nueva implementación para la abstracción del sistema de ficheros basada en los clásicos descriptores de fichero para ellos.
 
 El primer paso es definir una interfaz común para la abstracción del sistema de ficheros con la que exponer un contrato claro e independiente al de `SplFileObject` sobre el cual tengamos control total
 
-{% highlight php startinline %}
+```php?start_inline=1
 interface File {
     public function write($data);
 }
-{% endhighlight %}
+```
 
 Encapsulamos la actual implementación de `SplFileObject` destinada a clientes con una versión de PHP mayor a la 5.1.0
-{% highlight php startinline %}
+
+```php?start_inline=1
 class SplFile implements File {
     private $file;
 
@@ -113,10 +114,11 @@ class SplFile implements File {
         $this->file->fwrite($data);
     }
 }
-{% endhighlight %}
+```
 
 Y definimos una nueva implementación basada en descriptores para los clientes con PHP menor a la 5.1.0
-{% highlight php startinline %}
+
+```php?start_inline=1
 class DescriptorFile implements File {
     private $fd;
 
@@ -132,11 +134,11 @@ class DescriptorFile implements File {
         fclose($this->fd);
     }
 }
-{% endhighlight %}
+```
 
 De la misma forma, podemos crear dos provedores de abstracciones de ficheros. Esto es, podemos crear un **Abstract Factory** con múltiples implementaciones
 
-{% highlight php startinline %}
+```php?start_inline=1
 interface FileFactory {
     public function createFile($filename, $openMode);
 }
@@ -152,15 +154,17 @@ class SplFileFactory implements FileFactory {
         return new SplFile($filename, $openMode);
     }
 }
-{% endhighlight %}
+```
 
 Solo es necesario adaptar nuestro código a la nueva interfaz en el servicio `HelloWorldFileWriter`
-{% highlight php startinline %}
+
+```php?start_inline=1
     $file->write('Hello World!');
-{% endhighlight %}
+```
 
 Y en los tests
-{% highlight php startinline %}
+
+```php?start_inline=1
 class FileSpy implements File {
     public $data;
 
@@ -168,10 +172,11 @@ class FileSpy implements File {
         $this->data = $data;
     }
 }
-{% endhighlight %}
+```
 
 Ahora es el cliente el que puede elegir que **Factory** utilizar según su versión de PHP sin que ello afecte en absoluto a la ejecución de nuestro servicio
-{% highlight php startinline %}
+
+```php?start_inline=1
 // Bootstrap
 $writer = new HelloWorldFileWriter(
     new SplFileFactory()           // PHP > 5.1.0
@@ -180,4 +185,4 @@ $writer = new HelloWorldFileWriter(
 
 // Application
 $writer->writeTo('file.txt');
-{% endhighlight %}
+```

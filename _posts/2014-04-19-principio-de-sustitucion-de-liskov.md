@@ -23,7 +23,7 @@ La importancia de este principio se hace evidente cuando pensamos en las consecu
 ## Ejemplo de violación de LSP
 Considera el siguiente código como parte de una aplicación
 
-{% highlight php startinline %}
+```php?start_inline=1
 class Rectangle {
     private $width;
     private $height;
@@ -48,23 +48,23 @@ class Rectangle {
         return $this->width * $this->height;
     }
 }
-{% endhighlight %}
+```
 
 Supongamos que el código funciona correctamente en diversos lugares de la aplicación. Alguien reclama una nueva funcionalidad, ahora existe la posibilidad de manipular **cuadrados** además de rectángulos.
 
 A menudo en el mundo de la programación orientada a objetos la herencia se interpreta a través de relaciones del tipo *ES-UN*. Miremos como lo miremos, un cuadrado matemáticamente **es un** rectángulo. No es descabellado llegar a la conclusión de que en nuestro modelo un cuadrado debe extender de rectángulo.
 
-{% highlight php startinline %}
+```php?start_inline=1
 class Square extends Rectangle {
     //...
 }
-{% endhighlight %}
+```
 
 Sin embargo, esta forma de pensar puede conducirnos a grandes quebraderos de cabeza. En nuestro ejemplo, es fácil darnos cuenta de que `Square` no necesita de ambas propiedades `$width` o `$height`, nos bastaría con sencillo `$size` dado que el alto y ancho de un cuadrado se mantienen iguales. Imaginemos una aplicación con millones de estos objetos, un gasto significativo de memoria sin lugar a dudas.
 
 Asumamos que por ahora no nos importa mucho el consumo de memoria. Al heredar de `Rectangle` heredamos inmediatamente sus métodos `setWidth` y `setHeight` que introducen un punto de incongruencia a nuestro código dado que no existe la posibilidad de tener ancho y alto diferentes. Sin embargo podemos esquivar el problema sobreescribiendo los métodos de la siguiente forma:
 
-{% highlight php startinline %}
+```php?start_inline=1
 class Square extends Rectangle {
     public function setWidth($width) {
         parent::setWidth($width);
@@ -76,26 +76,26 @@ class Square extends Rectangle {
         parent::setWidth($height);
     }
 }
-{% endhighlight %}
+```
 
 Ahora cuando alguien utilice las propiedades `setWidth` o `setHeight` se mantendrá consistente con la definición de cuadrado.
 
-{% highlight php startinline %}
+```php?start_inline=1
 $square = new Square;
 $square->setWidth(1);//width, height = 1
 $square->setheight(2);//height, width = 2
-{% endhighlight %}
+```
 
 ### El problema
 Ahora que el código es consistente con la definición matemática de cuadrado, considera que pasamos un cuadrado a la siguiente función
 
-{% highlight php startinline %}
+```php?start_inline=1
 function g(Rectangle $r) {
     $r->setWidth(5);
     $r->setHeight(4);
     assert($r->area() == 20);
 }
-{% endhighlight %}
+```
 
 Aunque el cuadrado sea consistente con su definición, no lo es respecto a todos los casos y usuarios. Este código es una clara violación del LSP.
 
@@ -108,7 +108,8 @@ Desde el punto de vista del autor de la función `g` parece que no. Desde el pun
 Hay algunas heurísticas que te pueden ayudar a encontrar violaciones del principio de Liskov. Todas tienen que ver con clases derivadas que de alguna forma eliminan o corrompen la funcionalidad de las clases base.
 
 ### Funciones degenerativas en derivadas
-{% highlight php startinline %}
+
+```php?start_inline=1
 class Base {
     public function f() {
         //some code
@@ -118,7 +119,7 @@ class Base {
 class Derived extends Base {
     public function f() {}
 }
-{% endhighlight %}
+```
 
 El autor de `Derived` ha considerado que el método `f` no es necesario. Por desgracia, los usuarios que hagan uso de `Base` no saben que no deberían llamar al método `f`, esto es una clara violación de LSP.
 

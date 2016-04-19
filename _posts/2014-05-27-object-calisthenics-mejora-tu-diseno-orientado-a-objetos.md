@@ -31,7 +31,7 @@ Una vez que empieces a trabajar con métodos que hagan una sola cosa tu código 
 
 Extrae métodos con tu IDE favorito de modo que tengan un único nivel de abstracción:
 
-{% highlight php startinline %}
+```php?start_inline=1
 class Board {
     public function __construct() {
         $result = '';
@@ -45,9 +45,9 @@ class Board {
         return $result;
     }
 }
-{% endhighlight %}
+```
 
-{% highlight php startinline %}
+```php?start_inline=1
 class Board {
     public function __construct() {
         return $this->collectRows();
@@ -71,24 +71,24 @@ class Board {
         return $row . "\n";
     }
 }
-{% endhighlight %}
+```
 
 Tenemos más código si, pero un efecto positivo al refactorizarlo es que ahora cada nombre de método casa perfectamente con su implementación. Encontrar bugs en estos pequeños métodos es mucho más sencillo.
 
 ## No uses la palabra clave ELSE
 Todo programador conoce de sobra la construcción if/else. Viene definido en casi cualquier lenguaje de programación, es lo suficientemente simple como para que todo el mundo lo entienda. Todos nos hemos perdido alguna vez en alguno imposible de seguir o donde cada caso se extiende hasta el infinito. Es tan sencillo añadir un caso más en vez de mejorar el diseño... Los condicionales son una fuente frecuente de duplicidad. Los flags y el estado son dos ejemplos que llevan a este tipo de problemas
 
-{% highlight php startinline %}
+```php?start_inline=1
 if ($type === 'engineer') {
     return 300;
 } else {
     return 200;
 }
-{% endhighlight %}
+```
 
 Los lenguajes Orientado a Objetos ofrecen una poderosa herramienta para manejar casos complejos, **el polimorfismo**. Los diseños que hacen uso del polimorfismo son más fáciles de leer y mantener, expresan su intención de una manera más clara.
 
-{% highlight php startinline %}
+```php?start_inline=1
 class Employee {
     public abstract function salary();
 }
@@ -104,7 +104,7 @@ class StateAgent extends Employee {
         return 200;
     }
 }
-{% endhighlight %}
+```
 
 Como parte del ejercicio prueba a utilizar el patrón [Null Object](http://en.wikipedia.org/wiki/Null_Object_pattern), puede que te ayude en algunas situaciones. Hay otros métodos para liberarte del ELSE, intenta buscar alternativas.
 
@@ -123,7 +123,7 @@ Si todos esos `->` están conectados es probable que tu objeto esta profundizand
 
 La [Ley de Demeter](http://en.wikipedia.org/wiki/Law_of_Demeter) (“Habla solo con tus amigos”) es un buen comienzo. Piensa en ello de la siguiente forma: Puedes jugar con tus juguetes, juguetes que tú haces o juguetes que alguien te dá. Nunca jamás juegues con los juguetes de tus juguetes.
 
-{% highlight php startinline %}
+```php?start_inline=1
 class Piece {
     public $representation;
 }
@@ -143,11 +143,11 @@ class Board {
         return $representation;
     }
 }
-{% endhighlight %}
+```
 
 Podemos refactorizarlo a
 
-{% highlight php startinline %}
+```php?start_inline=1
 class Piece {
     private $representation;
 
@@ -179,7 +179,7 @@ class Board {
         return $representation;
     }
 }
-{% endhighlight %}
+```
 
 Fíjate que en este ejemplo la implementación del algoritmo es más difusa, es posible que entenderlo como un todo sea más difícil, sin embargo, has creado un método que revela que una parte de la transformación consiste en extraer un carácter. Es un método con un nombre absolutamente cohesivo, es muy probable que se pueda reutilizar. Las enigmática parte `$representation[0]` se ha visto encapsulada y reducida a un método que revela su intención.
 
@@ -200,17 +200,17 @@ La dificultad en crear clases tan pequeñas es que a menudo los comportamientos 
 ## Evita más de dos atributos de instancia
 La mayoría de las clases deberían ser responsables únicamente del manejo de una única variable de instancia, algunas requerirán de dos. Añadir una nueva variable de instancia a una clase, reduce de forma inmediata la cohesión de la clase. Programando de esta forma encontrarás que hay dos tipos de clases, aquellas que mantienen el estado de una única variable de instancia y aquellas que coordinan dos variables separadas. En general, no mezcles los dos tipos de responsabilidades.
 
-{% highlight php startinline %}
+```php?start_inline=1
 class Name {
     private $first;
     private $middle;
     private $last;
 }
-{% endhighlight %}
+```
 
 Se puede descomponer en
 
-{% highlight php startinline %}
+```php?start_inline=1
 class Name {
     private $surname;
     private $given;
@@ -223,7 +223,7 @@ class Surname {
 class GivenNames {
     private $names = [];
 }
-{% endhighlight %}
+```
 
 Si piensas en como descomponer, la oportunidad para separar el cometido de un nombre de familia (usado para restricciones de entidad) puede ser separado y reutilizado para otro tipo de nombres. El objeto `GivenName` contiene una lista de nombres, permitiendo al nuevo modelo absorber personas con nombres como `first`, `middle` y otros. La descomposición de variables de instancia te ayuda a entender lo que tienen en común algunas de ellas.
 
@@ -232,7 +232,7 @@ La experiencia descomponiendo atributos en una jerarquía de objetos que colabor
 ## Evita getters/setters o atributos públicos
 Si tus objetos no encapsulan apropiadamente el conjunto de variables de instancia y el diseño se vuelve engorroso, es el momento perfecto para examinar violaciones en la encapsulación. El comportamiento no seguirá las variables de instancia si puede preguntar por su valor en su lugar actual. La idea detrás de unas fuertes fronteras en los límites de la encapsulación es que fuerza a los programadores a trabajar con el código que has preparado. El acceso al comportamiento esta limitado a un único lugar. Esto desencadena muchos efectos, como por ejemplo una reducción dramática en la duplicidad de código, errores y una mejor localización de los cambios para implementar nuevas funcionalidades.
 
-{% highlight php startinline %}
+```php?start_inline=1
 class Account {
     private $money = 0;
 
@@ -248,11 +248,12 @@ class Account {
 //Add money to account
 $newMoney = $account->getMoney() + 100;
 $account->setMoney($newMoney);
-{% endhighlight %}
+```
 En este ejemplo, la clase `Account` es básicamente una estructura de datos sin comportamiento alguno. Una clase anémica que favorece la proliferación de *transaction scripts* a su alrededor para operar con ella.
 
 Un mejor diseño podría ser
-{% highlight php startinline %}
+
+```php?start_inline=1
 class Account {
     private $money = 0;
 
@@ -262,7 +263,7 @@ class Account {
 }
 
 $account->addMoney(100);
-{% endhighlight %}
+```
 
 Una forma popular de llamar a esta regla es "[Tell, don't ask](http://martinfowler.com/bliki/TellDontAsk.html)".
 
