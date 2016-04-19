@@ -32,4 +32,3 @@ class Sandwich implements Snack {
         return 2.5;
     }
 }
-

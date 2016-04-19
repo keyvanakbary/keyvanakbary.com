@@ -27,4 +27,3 @@ class User {
         return new self($username, $password, $email, $name);
     }
 }
-

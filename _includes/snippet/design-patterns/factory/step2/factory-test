@@ -30,4 +30,3 @@ class SnackStub implements Snack {
         return 0;
     }
 }
-

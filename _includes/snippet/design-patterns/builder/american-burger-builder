@@ -11,4 +11,3 @@ class AmericanBurgerBuilder extends BurgerBuilder {
         $this->burger->addToppings(['tomato', 'cheese', 'onion', 'pickles', 'bacon']);
     }
 }
-

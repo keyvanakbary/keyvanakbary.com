@@ -46,7 +46,7 @@ function beautify($snippet) {
         $b .= str_replace(str_repeat(' ', $i), '', $line) . "\n";
     }
 
-    return $b;
+    return trim($b);
 }
 
 function snippets($filename) {

@@ -18,4 +18,3 @@ class VendingMachine {
             'price: ' . $snack->price() . ' euros';
     }
 }
-

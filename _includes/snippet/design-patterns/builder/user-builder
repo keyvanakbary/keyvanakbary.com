@@ -29,4 +29,3 @@ class UserBuilder {
         return new User($this->username, $this->password, $this->email, $this->name);
     }
 }
-

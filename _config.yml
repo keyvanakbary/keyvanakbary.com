@@ -1,8 +1,12 @@
 gems:
   - jekyll-redirect-from
+  - kramdown
 name: Keyvan Akbary
-markdown: redcarpet
-highlighter: pygments
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+highlighter: rouge
 permalink: /:title
 url: "http://keyvanakbary.com"
 description: Developer at MyBuilder. Co-Founder for Funddy. Aspiring Craftsman. Living in London.

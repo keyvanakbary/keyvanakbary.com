@@ -11,4 +11,3 @@ class VeggieBurgerBuilder extends BurgerBuilder {
         $this->burger->addToppings(['cauliflower', 'tomato', 'onion', 'cheese']); 
     }
 }
-
