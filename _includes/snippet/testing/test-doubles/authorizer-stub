@@ -1,0 +1,5 @@
+class AcceptingAuthorizerStub implements Authorizer {
+    public function authorize($username, $password) {
+        return true;
+    }
+}

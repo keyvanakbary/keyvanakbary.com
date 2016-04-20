@@ -1,0 +1,4 @@
+class DummyAuthorizer implements Authorizer {
+    public function authorize($username, $password) {
+    }
+}

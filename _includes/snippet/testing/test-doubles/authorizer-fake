@@ -1,0 +1,5 @@
+class AcceptingAuthorizerFake implements Authorizer {
+    public function authorize($username, $password) {
+        return $username === 'Bob';
+    }
+}

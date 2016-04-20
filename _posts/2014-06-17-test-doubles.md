@@ -15,64 +15,26 @@ De forma análoga al uso de dobles en Hollywood, los *test doubles* son un térm
 
 Imaginemos que queremos probar una parte nuestro sistema que depende de la siguiente interfaz
 
-```php?start_inline=1
-interface Authorizer {
-    /**
-     * @return boolean
-     */
-    public function authorize($username, $password);
-}
-```
+{% include snippet.html file="testing/test-doubles/authorizer" %}
 
 Dependiendo del contexto y la intención del test disponemos de una buena variedad de *dobles* para satisfacer dicha dependencia.
 
 ## Dummy
 
-```php?start_inline=1
-class DummyAuthorizer implements Authorizer {
-    public function authorize($username, $password) {
-    }
-}
-```
+{% include snippet.html file="testing/test-doubles/dummy-authorizer" %}
 
 Un objeto `Dummy` es algo que **se utiliza para satisfacer dependencias, su uso en ejecución es completamente irrelevante**.
 
-```php?start_inline=1
-class System {
-    private $authorizer;
+{% include snippet.html file="testing/test-doubles/dummy-usage" %}
 
-    public function __construct(Authorizer $authorizer) {
-        $this->authorizer = $authorizer;
-    }
-
-    public function loginCount() {
-        //returns number of logged in users
-    }
-}
-```
-
-```php?start_inline=1
-/**
- * @test
- */
-public function newlyCreatedSystemHasNoLoggedInUsers() {
-    $system = new System(new DummyAuthorizer());
-    $this->assertThat($system->loginCount(), $this->equalsTo(0));
-}
-```
+{% include snippet.html file="testing/test-doubles/dummy-test" %}
 
 Aunque en este test en concreto no se haga uso explícito de `Authorizer`, es necesario satisfacer la dependencia para poder construir `System`. El método `authorize` no se ejecutará dado que en este test nadie va a iniciar sesión. Por eso no es un problema que dicho método no devuelva nada. Si alguien lo utiliza, la ejecución se romperá y eso es lo que queremos, **un `Dummy` no debería usarse en ejecución**.
 
 ## Stub
 Imaginemos que ahora queremos probar una parte del sistema que requiere de haber iniciado sesión. No queremos utilizar la lógica de un autentificador real, nuestro propósito es probar únicamente la parte del sistema que utiliza el login, no el propio login. Hacerlo incrementaría el acoplamiento con el código y por tanto aumentaría la fragilidad de nuestro sistema. Un fallo en el login rompería el test aunque no hubiese cambiado la lógica de negocio. Además en muchos casos, las dependencias son complejas y no queremos depender de setups largos y lentos.
 
-```php?start_inline=1
-class AcceptingAuthorizerStub implements Authorizer {
-    public function authorize($username, $password) {
-        return true;
-    }
-}
-```
+{% include snippet.html file="testing/test-doubles/authorizer-stub" %}
 
 El propósito de un `Stub` es el de **proveer valores concretos para guiar al test en una determinada dirección**.
 
@@ -82,16 +44,7 @@ De la misma forma, si queremos probar una parte del sistema a cargo de usuarios 
 ## Spy
 Cuando quieras asegurarte de haber llamado a un método en tu sistema puedes utilizar un espía.
 
-```php?start_inline=1
-class AcceptingAuthorizerSpy implements Authorizer {
-    public $authorizeWasCalled = false;
-
-    public function authorize($username, $password) {
-        $this->authorizeWasCalled = true;
-        return true;
-    }
-}
-```
+{% include snippet.html file="testing/test-doubles/authorizer-spy" %}
 
 Comprobarlo es tan sencillo como preguntar a nuestro espía si se ha llamado al método en cuestión en la fase de aserción de nuestro test.
 
@@ -99,32 +52,13 @@ Hay que tener cuidado, **espiar al que te llama tiene un coste y se paga en form
 
 ## Mock
 
-```php?start_inline=1
-class AcceptingAuthorizerVerificationMock implements Authorizer {
-    public $authorizeWasCalled = false;
-
-    public function authorize($username, $password) {
-        $this->authorizeWasCalled = true;
-        return true;
-    }
-
-    public function verify() {
-        return $this->authorizeWasCalled;
-    }
-}
-```
+{% include snippet.html file="testing/test-doubles/authorizer-mock" %}
 
 Un mock conoce lo que se se está testeando. Si te fijas, se ha movido la fase de verificación del test al mock. Al contrario que un `Stub`, un `Mock` no está tan interesado en devolver valores concretos. Un mock esta más interesado en que métodos se han invocado, con que argumentos, cuando y con que frecuencia. Un mock siempre es un espía.
 
 ## Fake
 
-```php?start_inline=1
-class AcceptingAuthorizerFake implements Authorizer {
-    public function authorize($username, $password) {
-        return $username === 'Bob';
-    }
-}
-```
+{% include snippet.html file="testing/test-doubles/authorizer-fake" %}
 
 Únicamente los usuarios con nombre de usuario “Bob” serán autorizados. Puedes hacer que un `Fake` se comporte de forma diferente según los datos que envíes. **Es una especie de simulador**.
 
