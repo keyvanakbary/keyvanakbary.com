@@ -1,0 +1,5 @@
+class SplFileFactory implements FileFactory {
+    public function createFile($filename, $openMode) {
+        return new SplFile($filename, $openMode);
+    }
+}

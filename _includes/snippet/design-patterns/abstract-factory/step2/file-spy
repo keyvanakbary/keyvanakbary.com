@@ -1,0 +1,7 @@
+class FileSpy implements File{
+    public $data;
+
+    public function write($data) {
+        $this->data = $data;
+    }
+}

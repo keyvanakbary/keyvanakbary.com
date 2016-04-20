@@ -1,0 +1,5 @@
+class FileFactory {
+    public function createFile($filename, $openMode) {
+        return new SplFileObject($filename, $openMode);
+    }
+}

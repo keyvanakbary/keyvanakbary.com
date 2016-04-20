@@ -1,0 +1,5 @@
+class DescriptorFileFactory implements FileFactory {
+    public function createFile($filename, $openMode) {
+        return new DescriptorFile($filename, $openMode);
+    }
+}

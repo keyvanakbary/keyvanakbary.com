@@ -1,0 +1,6 @@
+class HelloWorldFileWriter {
+    public function writeTo($filepath) {
+        $file = new SplFileObject($filepath, 'w+');
+        $file->fwrite('Hello World!');
+    }
+}

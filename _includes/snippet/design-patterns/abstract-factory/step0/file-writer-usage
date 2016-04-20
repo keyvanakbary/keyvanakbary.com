@@ -1,0 +1,2 @@
+$writer = new HelloWorldFileWriter();
+$writer->writeTo('file.txt');

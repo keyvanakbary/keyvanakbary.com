@@ -1,0 +1,8 @@
+// Bootstrap
+$writer = new HelloWorldFileWriter(
+    new SplFileFactory()   // PHP > 5.1.0
+    // new DescriptorFileFactory() // PHP < 5.1.0
+);
+
+// Application
+$writer->writeTo('file.txt');

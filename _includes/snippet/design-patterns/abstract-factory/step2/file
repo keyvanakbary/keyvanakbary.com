@@ -1,0 +1,3 @@
+interface File {
+    public function write($data);
+}

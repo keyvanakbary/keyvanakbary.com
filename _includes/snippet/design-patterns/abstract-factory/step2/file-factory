@@ -1,0 +1,3 @@
+interface FileFactory {
+    public function createFile($filename, $openMode);
+}
