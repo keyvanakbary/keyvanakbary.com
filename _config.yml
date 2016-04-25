@@ -7,7 +7,7 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 highlighter: rouge
-permalink: /:title
+permalink: /:title/
 url: "http://keyvanakbary.com"
 description: Spaniard leaving in London. Lead Developer at TransferWise. Built Funddy. Author of “Domain-Driven Design in PHP” book.
 excerpt_separator: <!--more-->
