@@ -1,0 +1,11 @@
+$account1 = new Account();
+$account1->link(new Transaction(5));
+
+$account2 = new Account();
+$account2->link(new Transaction(10));
+
+$overallAccount = new OverallAccount();
+$overallAccount->link($account1);
+$overallAccount->link($account2);
+
+$balance = $overallAccount->balance();

@@ -1,0 +1,3 @@
+interface Holding {
+    public function balance(): int;
+}

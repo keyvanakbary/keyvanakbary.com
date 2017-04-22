@@ -1,0 +1,16 @@
+class Account implements Holding {
+    private $holdings = [];
+
+    public function link(Holding $holding) {
+        $this->holdings[] = $holding;
+    }
+
+    public function balance(): int {
+        $sum = 0;
+        foreach ($this->holdings as $holding) {
+            $sum += $holding->balance();
+        }
+
+        return $sum;
+    }
+}

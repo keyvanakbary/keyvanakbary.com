@@ -1,0 +1,5 @@
+$account = new Account();
+$account->link(new Transaction(5));
+$account->link(new Transaction(10));
+
+$balance = $account->balance();

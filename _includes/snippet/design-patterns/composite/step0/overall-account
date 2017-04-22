@@ -1,0 +1,16 @@
+class OverallAccount {
+    private $accounts = [];
+
+    public function link(Account $account) {
+        $this->accounts[] = $account;
+    }
+
+    public function balance(): int {
+        $sum = 0;
+        foreach ($this->accounts as $account) {
+            $sum += $account->balance();
+        }
+
+        return $sum;
+    }
+}

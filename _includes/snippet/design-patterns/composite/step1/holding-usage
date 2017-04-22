@@ -1,0 +1,11 @@
+$holding1 = new Account();
+$holding1->link(new Transaction(5));
+
+$holding2 = new Account();
+$holding2->link(new Transaction(10));
+
+$overallHolding = new Account();
+$overallHolding->link($holding1);
+$overallHolding->link($holding2);
+
+$balance = $overallHolding->balance();
