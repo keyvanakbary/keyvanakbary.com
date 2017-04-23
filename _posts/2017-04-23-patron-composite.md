@@ -16,17 +16,17 @@ Como de costumbre, la definición formal puede ser un poco difusa. Mejor con un 
 
 Imaginemos por un momento que somos responsables de diseñar un sencillo sistema financiero cuyo propósito es el de llevar las cuentas de transacciones bancarias.
 
-Podemos representar una transacción puede como un valor mediante [Value Object](https://en.wikipedia.org/wiki/Value_object)
+Podemos representar una transacción como un valor mediante el uso de [Value Object](https://en.wikipedia.org/wiki/Value_object)
 
 {% include snippet.html file="design-patterns/composite/step0/transaction" %}
 
-Y el concepto de cuenta puede encargarse de agrupar, enlazar y calcular el balance entre los valores de las transacciones
+Y el concepto de cuenta puede encargarse de agrupar, enlazar y calcular el balance de las transacciones
 
 {% include snippet.html file="design-patterns/composite/step0/account" %}
 
 {% include snippet.html file="design-patterns/composite/step0/account-usage" %}
 
-Ahora, **una persona puede tener múltiples cuentas bancarias asociadas**. Seguramente nos interese también calcular el balance entre ellas. Podemos hacerlo introduciendo el concepto de cuenta general.
+Ahora, **una persona puede tener múltiples cuentas bancarias asociadas**. Seguramente nos interese también calcular el balance entre todas ellas. Una forma de hacerlo es introduciendo el concepto de cuenta general.
 
 {% include snippet.html file="design-patterns/composite/step0/overall-account" %}
 
@@ -48,7 +48,7 @@ e implementando dicho contrato tanto en cuentas como transacciones
 
 {% include snippet.html file="design-patterns/composite/step1/transaction" %}
 
-ahora las cuentas puedan operar tanto con transacciones como con otras cuentas, haciendo posible estructuras recursivas. El objeto `OverallAccount` ya no es necesario, puede ser eliminado.
+ahora las cuentas puedan operar tanto con transacciones como con otras cuentas, haciendo posible estructuras recursivas. El objeto `OverallAccount` ya no es necesario y puede ser eliminado.
 
 Aplicar _Composite_ no solo elimina duplicidad, sino que también consigue librar al cliente de diferenciar entre cuentas individuales o colecciones de cuentas, unificando el comportamiento de ambos casos al provisto por `Holding`. Donde antes el código cliente esperaba un objeto individual ahora puede aceptar un compuesto.
 
