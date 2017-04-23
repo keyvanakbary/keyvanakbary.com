@@ -50,7 +50,7 @@ e implementando dicho contrato tanto en cuentas como transacciones
 
 ahora las cuentas puedan operar tanto con transacciones como con otras cuentas, haciendo posible estructuras recursivas. El objeto `OverallAccount` ya no es necesario, puede ser eliminado.
 
-Aplicar _Composite_ no solo elimina duplicidad, sino que también consigue librar al cliente de diferenciar entre cuentas individuales o colecciones de cuentas, unificando el comportamiento de ambos casos al provisto por `Holding`.
+Aplicar _Composite_ no solo elimina duplicidad, sino que también consigue librar al cliente de diferenciar entre cuentas individuales o colecciones de cuentas, unificando el comportamiento de ambos casos al provisto por `Holding`. Donde antes el código cliente esperaba un objeto individual ahora puede aceptar un compuesto.
 
 {% include snippet.html file="design-patterns/composite/step1/holding-usage" %}
 
