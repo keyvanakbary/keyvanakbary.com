@@ -12,27 +12,27 @@ El patrón _Composite_ es otro de los ya clásicos patrones de diseño presentad
 
 > El patrón _Composite_ permite componer objetos en estructuras árbol como medio para representar jerarquías parcialmente enteras. Facilita tratar con colecciones de objetos u objetos individuales de forma uniforme.
 
-Como de costumbre, la definición formal puede ser un poco difusa. Mejor con un ejemplo práctico.
+Sin contexto la definición queda difusa. Seguramente mejor presentarlo con un ejemplo práctico.
 
-Imaginemos por un momento que somos responsables de diseñar un sencillo sistema financiero cuyo propósito es el de llevar las cuentas de transacciones bancarias.
+Imaginemos por un momento que somos responsables de diseñar un sencillo sistema bancario cuyo propósito es el de llevar las cuentas de transacciones monetarias.
 
-Podemos representar una transacción como un valor mediante el uso de [Value Object](https://en.wikipedia.org/wiki/Value_object)
+Podemos representar una transacción como un valor, haciendo uso del patrón [Value Object](https://en.wikipedia.org/wiki/Value_object)
 
 {% include snippet.html file="design-patterns/composite/step0/transaction" %}
 
-Y el concepto de cuenta puede encargarse de agrupar, enlazar y calcular el balance de las transacciones
+Hacemos a la cuenta bancaria responsable de agrupar, enlazar y calcular el balance de las transacciones
 
 {% include snippet.html file="design-patterns/composite/step0/account" %}
 
 {% include snippet.html file="design-patterns/composite/step0/account-usage" %}
 
-Ahora, **una persona puede tener múltiples cuentas bancarias asociadas**. Seguramente nos interese también calcular el balance entre todas ellas. Una forma de hacerlo es introduciendo el concepto de cuenta general.
+En el mundo real, es común que **una persona tenga múltiples cuentas bancarias asociadas**. Si quisieramos ofrecer el balance entre todas ellas, podríamos hacerlo introduciendo el concepto de cuenta general.
 
 {% include snippet.html file="design-patterns/composite/step0/overall-account" %}
 
 {% include snippet.html file="design-patterns/composite/step0/overall-account-usage" %}
 
-Te habrás percatado que, salvando algunas diferencias, **la lógica de cálculo y enlazado de transacciones y cuentas es prácticamente la misma en los objetos de `Account` y `OverallAccount`.**
+Echando un vistazo rápido al código te habrás percatado que, salvando algunas diferencias, **la lógica de cálculo y enlazado de transacciones y cuentas es prácticamente la misma en los objetos de `Account` y `OverallAccount`.** Ambos objetos son prácticamente idénticos y esto huele a duplicidad.
 
 ## Eliminando duplicidad
 
