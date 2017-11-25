@@ -10,7 +10,7 @@ class System {
         $this->authorizer = $authorizer;
     }
 
-    public function loginCount() {
+    public function loginCount(): int {
         //some logic count calculation...
         return 0;
     }

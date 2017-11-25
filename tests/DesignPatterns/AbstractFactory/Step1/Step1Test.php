@@ -8,7 +8,7 @@ class Step1Test extends TestCase {
     /**
      * @test
      */
-    public function itShouldCreateFile() {
+    public function itShouldCreateFile(): void {
         //snippet file-writer-usage
         $writer = new HelloWorldFileWriter(new FileFactory());
         $writer->writeTo('file.txt');

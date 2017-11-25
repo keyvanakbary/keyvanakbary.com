@@ -10,7 +10,7 @@ class HelloWorldFileWriterTest extends TestCase {
     /**
      * @test
      */
-    public function itShouldWriteHelloWorld() {
+    public function itShouldWriteHelloWorld(): void {
         $writer = new HelloWorldFileWriter(
             $this->createFileFactoryStubWith(
                 $file = new FileSpy()
@@ -22,7 +22,7 @@ class HelloWorldFileWriterTest extends TestCase {
         $this->assertEquals('Hello World!', $file->data);
     }
 
-    private function createFileFactoryStubWith($file) {
+    private function createFileFactoryStubWith($file): FileFactory {
         $stub = Mockery::mock(FileFactory::class);
         $stub->shouldReceive('createFile')->andReturn($file);
 
@@ -33,7 +33,7 @@ class HelloWorldFileWriterTest extends TestCase {
 class FileSpy {
     public $data;
 
-    public function fwrite($data) {
+    public function fwrite(string $data): void {
         $this->data = $data;
     }
 }

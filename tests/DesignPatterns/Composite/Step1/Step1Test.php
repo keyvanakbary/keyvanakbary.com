@@ -8,7 +8,7 @@ class CompositeTest extends TestCase {
     /**
      * @test
      */
-    public function itShouldSumTransactions() {
+    public function itShouldSumTransactions(): void {
         $account = new Account();
         $account->link(new Transaction(5));
         $account->link(new Transaction(10));
@@ -19,7 +19,7 @@ class CompositeTest extends TestCase {
     /**
      * @test
      */
-    public function itShouldSumAccountBalances() {
+    public function itShouldSumAccountBalances(): void {
         //snippet holding-usage
         $holding1 = new Account();
         $holding1->link(new Transaction(5));

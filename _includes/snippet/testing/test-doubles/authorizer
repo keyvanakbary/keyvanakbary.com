@@ -1,6 +1,3 @@
 interface Authorizer {
-    /**
-     * @return boolean
-     */
-    public function authorize($username, $password);
+    public function authorize(string $username, string $password): bool;
 }

@@ -4,7 +4,7 @@ namespace Testing\TestDoubles;
 
 //snippet authorizer-stub
 class AcceptingAuthorizerStub implements Authorizer {
-    public function authorize($username, $password) {
+    public function authorize(string $username, string $password): bool {
         return true;
     }
 }

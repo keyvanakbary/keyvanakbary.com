@@ -1,34 +1,34 @@
 interface Snack {
-    public function description();
-    public function price();
+    public function description(): string;
+    public function price(): float;
 }
 
 class Chocolate implements Snack {
-    public function description() {
+    public function description(): string {
         return 'delicious chocolate';
     }
 
-    public function price() {
+    public function price(): float {
         return 1;
     }
 }
 
 class Chips implements Snack {
-    public function description() {
+    public function description(): string {
         return 'crunchy chips';
     }
 
-    public function price() {
+    public function price(): float {
         return 1.2;
     }
 }
 
 class Sandwich implements Snack {
-    public function description() {
+    public function description(): string {
         return 'tasty sandwich';
     }
 
-    public function price() {
+    public function price(): float {
         return 2.5;
     }
 }

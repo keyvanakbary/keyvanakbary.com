@@ -4,15 +4,15 @@ namespace DesignPatterns\Builder;
 
 //snippet american-burger-builder
 class AmericanBurgerBuilder extends BurgerBuilder {
-    public function prepareBun() {
+    public function prepareBun(): void {
         $this->burger->setBun('slider');
     }
 
-    public function cookPatty() {
+    public function cookPatty(): void {
         $this->burger->setPatty('beef');
     }
 
-    public function putToppings() {
+    public function putToppings(): void {
         $this->burger->addToppings(['tomato', 'cheese', 'onion', 'pickles', 'bacon']);
     }
 }

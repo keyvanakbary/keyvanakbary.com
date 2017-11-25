@@ -9,7 +9,7 @@ class Step2Test extends TestCase {
     /**
      * @test
      */
-    public function itShouldComposeSnackInfo() {
+    public function itShouldComposeSnackInfo(): void {
         $m = new VendingMachine(new SnackFactory());
         $this->assertEquals($m->infoFor(1), <<<INFO
 description: crunchy chips

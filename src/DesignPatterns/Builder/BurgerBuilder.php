@@ -6,16 +6,16 @@ namespace DesignPatterns\Builder;
 abstract class BurgerBuilder {
     protected $burger;
 
-    public function createBurger() {
+    public function createBurger(): void {
         $this->burger = new Burger();
     }
 
-    public function getBurger() {
+    public function getBurger(): Burger {
         return $this->burger;
     }
 
-    abstract public function prepareBun();
-    abstract public function cookPatty();
-    abstract public function putToppings();
+    abstract public function prepareBun(): void;
+    abstract public function cookPatty(): void;
+    abstract public function putToppings(): void;
 }
 //end-snippet

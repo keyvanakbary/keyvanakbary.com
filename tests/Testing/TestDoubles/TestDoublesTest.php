@@ -8,7 +8,7 @@ class TestDoublesTest extends TestCase {
     /**
      * @test
      */
-    function stubShouldAuthorize() {
+    function stubShouldAuthorize(): void {
         $system = new LoginSystem($authorizer = new AcceptingAuthorizerStub());
 
         $out = $system->login('Joe', 'irrelevant');
@@ -19,7 +19,7 @@ class TestDoublesTest extends TestCase {
     /**
      * @test
      */
-    function spyShouldNotBeCalled() {
+    function spyShouldNotBeCalled(): void {
         new LoginSystem($authorizer = new AcceptingAuthorizerSpy());
 
         $this->assertThat($authorizer->authorizeWasCalled, $this->isFalse());
@@ -28,7 +28,7 @@ class TestDoublesTest extends TestCase {
     /**
      * @test
      */
-    function spyShouldBeCalled() {
+    function spyShouldBeCalled(): void {
         $system = new LoginSystem($authorizer = new AcceptingAuthorizerSpy());
 
         $out = $system->login('Joe', 'irrelevant');
@@ -40,7 +40,7 @@ class TestDoublesTest extends TestCase {
     /**
      * @test
      */
-    function fakeShouldAuthorize() {
+    function fakeShouldAuthorize(): void {
         $system = new LoginSystem(new AcceptingAuthorizerFake());
 
         $out = $system->login('Bob', 'irrelevant');
@@ -51,7 +51,7 @@ class TestDoublesTest extends TestCase {
     /**
      * @test
      */
-    function fakeShouldNotAuthorize() {
+    function fakeShouldNotAuthorize(): void {
         $system = new LoginSystem(new AcceptingAuthorizerFake());
 
         $out = $system->login('Invalid', 'irrelevant');
@@ -62,7 +62,7 @@ class TestDoublesTest extends TestCase {
     /**
      * @test
      */
-    function mockShouldNotBeValid() {
+    function mockShouldNotBeValid(): void {
         new LoginSystem($mock = new AcceptingAuthorizerVerificationMock());
 
         $this->assertThat($mock->verify(), $this->isFalse());
@@ -71,7 +71,7 @@ class TestDoublesTest extends TestCase {
     /**
      * @test
      */
-    function mockShouldBeValid() {
+    function mockShouldBeValid(): void {
         $system = new LoginSystem($mock = new AcceptingAuthorizerVerificationMock());
 
         $out = $system->login('Joe', 'irrelevant');

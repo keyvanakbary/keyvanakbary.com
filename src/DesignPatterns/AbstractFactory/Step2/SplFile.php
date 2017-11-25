@@ -12,7 +12,7 @@ class SplFile implements File {
         $this->file = new SplFileObject($filename, $openMode);
     }
 
-    public function write($data) {
+    public function write(string $data): void {
         $this->file->fwrite($data);
     }
 }

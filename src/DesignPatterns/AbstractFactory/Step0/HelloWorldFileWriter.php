@@ -6,7 +6,7 @@ use SplFileObject;
 
 //snippet file-writer
 class HelloWorldFileWriter {
-    public function writeTo($filepath) {
+    public function writeTo(string $filepath): void {
         $file = new SplFileObject($filepath, 'w+');
         $file->fwrite('Hello World!');
     }

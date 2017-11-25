@@ -6,12 +6,12 @@ namespace Testing\TestDoubles;
 class AcceptingAuthorizerVerificationMock implements Authorizer {
     public $authorizeWasCalled = false;
 
-    public function authorize($username, $password) {
+    public function authorize(string $username, string $password): bool {
         $this->authorizeWasCalled = true;
         return true;
     }
 
-    public function verify() {
+    public function verify(): bool {
         return $this->authorizeWasCalled;
     }
 }

@@ -8,7 +8,7 @@ class Step0Test extends TestCase {
     /**
      * @test
      */
-    public function itShouldComposeSnackInfo() {
+    public function itShouldComposeSnackInfo(): void {
         //snippet vending-machine-usage
         $m = new VendingMachine();
         assert($m->infoFor(1) == <<<INFO

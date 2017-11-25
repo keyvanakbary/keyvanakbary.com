@@ -4,9 +4,9 @@ namespace DesignPatterns\Factory\Step0;
 
 //snippet vending-machine
 class VendingMachine {
-    public function infoFor($code) {
+    public function infoFor(int $code): string {
         $description = '';
-        $price = '';
+        $price = 0;
         if ($code === 0) {
             $description = 'delicious chocolate';
             $price = 1;
@@ -21,7 +21,7 @@ class VendingMachine {
         return $this->format($description, $price);
     }
 
-    private function format($description, $price) {
+    private function format(string $description, float $price): string {
         return
             'description: ' . $description . "\n" .
             'price: ' . $price . ' euros';

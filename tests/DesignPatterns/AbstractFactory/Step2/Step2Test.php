@@ -62,10 +62,10 @@ class Step2Test extends TestCase {
 }
 
 //snippet file-spy
-class FileSpy implements File{
+class FileSpy implements File {
     public $data;
 
-    public function write($data) {
+    public function write(string $data): void {
         $this->data = $data;
     }
 }

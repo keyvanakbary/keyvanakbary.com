@@ -6,7 +6,7 @@ namespace DesignPatterns\Composite\Step0;
 class OverallAccount {
     private $accounts = [];
 
-    public function link(Account $account) {
+    public function link(Account $account): void {
         $this->accounts[] = $account;
     }
 

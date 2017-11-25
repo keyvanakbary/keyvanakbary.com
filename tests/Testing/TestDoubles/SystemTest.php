@@ -9,7 +9,7 @@ class SystemTest extends TestCase {
     /**
      * @test
      */
-    public function newlyCreatedSystemHasNoLoggedInUsers() {
+    public function newlyCreatedSystemHasNoLoggedInUsers(): void {
         $system = new System(new DummyAuthorizer());
 
         $this->assertThat($system->loginCount(), $this->equalTo(0));

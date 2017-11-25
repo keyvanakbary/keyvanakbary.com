@@ -1,5 +1,5 @@
 class SnackFactory {
-    public function create($code) {
+    public function create(int $code): Snack {
         switch($code) {
             case 0:
                 return new Chocolate;

@@ -3,15 +3,15 @@ class Burger {
     private $toppings = [];
     private $bun;
 
-    public function setBun($bun) {
+    public function setBun(string $bun): void {
         $this->bun = $bun;
     }
 
-    public function setPatty($patty) {
+    public function setPatty(string $patty): void {
         $this->patty = $patty;
     }
 
-    public function addToppings(array $toppings) {
+    public function addToppings(array $toppings): void {
         $this->toppings = $toppings;
     }
 }

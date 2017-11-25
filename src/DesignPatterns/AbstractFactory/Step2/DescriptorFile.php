@@ -10,7 +10,7 @@ class DescriptorFile implements File {
         $this->fd = fopen($filename, $openMode);
     }
 
-    public function write($data) {
+    public function write(string $data): void {
         fwrite($this->fd, $data);
     }
 

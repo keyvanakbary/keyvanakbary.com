@@ -4,9 +4,6 @@ namespace Testing\TestDoubles;
 
 //snippet authorizer
 interface Authorizer {
-    /**
-     * @return boolean
-     */
-    public function authorize($username, $password);
+    public function authorize(string $username, string $password): bool;
 }
 //end-snippet

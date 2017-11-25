@@ -6,7 +6,7 @@ namespace Testing\TestDoubles;
 class AcceptingAuthorizerSpy implements Authorizer {
     public $authorizeWasCalled = false;
 
-    public function authorize($username, $password) {
+    public function authorize(string $username, string $password): bool {
         $this->authorizeWasCalled = true;
         return true;
     }

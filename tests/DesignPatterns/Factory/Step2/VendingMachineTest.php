@@ -11,7 +11,7 @@ class VendingMachineTest extends TestCase {
     /**
      * @test
      */
-    public function itShouldComposeSnackInfo() {
+    public function itShouldComposeSnackInfo(): void {
         $vendingMachine = new VendingMachine($this->createSnackFactoryStubWith(new SnackStub));
 
         $expected = <<<INFO
@@ -22,7 +22,7 @@ INFO;
         $this->assertEquals($expected, $vendingMachine->infoFor(0));
     }
 
-    private function createSnackFactoryStubWith($snack) {
+    private function createSnackFactoryStubWith(Snack $snack): SnackFactory {
         $stub = Mockery::mock(new SnackFactory());
         $stub->shouldReceive('create')->andReturn($snack);
 
@@ -31,11 +31,11 @@ INFO;
 }
 
 class SnackStub implements Snack {
-    public function description() {
+    public function description(): string {
         return 'irrelevant';
     }
 
-    public function price() {
+    public function price(): float {
         return 0;
     }
 }

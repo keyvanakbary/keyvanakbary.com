@@ -6,7 +6,7 @@ namespace DesignPatterns\Composite\Step1;
 class Account implements Holding {
     private $holdings = [];
 
-    public function link(Holding $holding) {
+    public function link(Holding $holding): void {
         $this->holdings[] = $holding;
     }
 

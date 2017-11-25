@@ -9,11 +9,10 @@ class HelloWorldFileWriter {
         $this->fileFactory = $fileFactory;
     }
 
-    public function writeTo($filepath) {
+    public function writeTo(string $filepath): void {
         $file = $this->fileFactory->createFile($filepath, 'w+');
         //snippet update-file-writer
         $file->write('Hello World!');
         //end-snippet
     }
 }
-

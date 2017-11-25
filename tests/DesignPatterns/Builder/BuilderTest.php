@@ -8,7 +8,7 @@ class BuilderTest extends TestCase {
     /**
      * @test
      */
-    public function shouldBuildBurgerChef() {
+    public function shouldBuildBurgerChef(): void {
         //snippet burger-usage
         $chef = new BurgerChef();
         $vegieBurger = $chef->makeBurger(new VeggieBurgerBuilder());
@@ -19,7 +19,7 @@ class BuilderTest extends TestCase {
     /**
      * @test
      */
-    public function shouldBuildAUser() {
+    public function shouldBuildAUser(): void {
         //snippet user-builder-mandatory-usage
         $user = UserBuilder::aUser('keyvan', 'pass')->build();
         //end-snippet
@@ -28,7 +28,7 @@ class BuilderTest extends TestCase {
     /**
      * @test
      */
-    public function shouldBuildAUserWithOptionalParameters() {
+    public function shouldBuildAUserWithOptionalParameters(): void {
         //snippet user-builder-optional-usage
         $user = UserBuilder::aUser('keyvan', 'pass')
             ->withName('Keyvan Akbary')

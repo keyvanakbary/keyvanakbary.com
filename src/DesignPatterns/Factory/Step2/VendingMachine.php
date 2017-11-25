@@ -12,11 +12,11 @@ class VendingMachine {
         $this->snackFactory = $snackFactory;
     }
 
-    public function infoFor($code) {
+    public function infoFor(string $code): string {
         return $this->format($this->snackFactory->create($code));
     }
 
-    private function format(Snack $snack) {
+    private function format(Snack $snack): string {
         return
             'description: ' . $snack->description() . "\n" .
             'price: ' . $snack->price() . ' euros';

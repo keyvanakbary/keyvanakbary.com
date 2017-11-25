@@ -6,7 +6,7 @@ namespace DesignPatterns\Composite\Step0;
 class Account {
     private $transactions = [];
 
-    public function link(Transaction $transaction) {
+    public function link(Transaction $transaction): void {
         $this->transactions[] = $transaction;
     }
 

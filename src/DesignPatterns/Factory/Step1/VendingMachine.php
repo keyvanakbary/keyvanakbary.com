@@ -4,7 +4,7 @@ namespace DesignPatterns\Factory\Step1;
 
 //snippet vending-machine
 class VendingMachine {
-    public function infoFor($code) {
+    public function infoFor(int $code): string {
         $snack = null;
         if ($code === 0) {
             $snack = new Chocolate;
@@ -17,7 +17,7 @@ class VendingMachine {
         return $this->format($snack);
     }
 
-    private function format(Snack $snack) {
+    private function format(Snack $snack): string {
         return
             'description: ' . $snack->description() . "\n" .
             'price: ' . $snack->price() . ' euros';
