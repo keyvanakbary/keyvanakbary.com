@@ -1,4 +1,4 @@
-class HelloWorldFileWriterTest extends PHPUnit_Framework_TestCase {
+class HelloWorldFileWriterTest extends TestCase {
     /**
      * @test
      */

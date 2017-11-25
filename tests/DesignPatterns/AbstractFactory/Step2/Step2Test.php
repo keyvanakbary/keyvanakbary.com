@@ -3,9 +3,9 @@
 namespace DesignPatterns\AbstractFactory\Step2;
 
 use Mockery;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class Step2Test extends PHPUnit_Framework_TestCase {
+class Step2Test extends TestCase {
     /**
      * @test
      */

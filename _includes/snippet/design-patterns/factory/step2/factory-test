@@ -1,4 +1,4 @@
-class VendingMachineTest extends \PHPUnit_Framework_TestCase {
+class VendingMachineTest extends TestCase {
     /**
      * @test
      */

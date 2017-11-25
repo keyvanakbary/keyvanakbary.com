@@ -2,10 +2,9 @@
 
 namespace Testing\TestDoubles;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class TestDoublesTest extends PHPUnit_Framework_TestCase
-{
+class TestDoublesTest extends TestCase {
     /**
      * @test
      */

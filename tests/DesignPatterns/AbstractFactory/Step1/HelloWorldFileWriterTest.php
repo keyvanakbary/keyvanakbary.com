@@ -3,10 +3,10 @@
 namespace DesignPatterns\AbstractFactory\Step1;
 
 use Mockery;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
 //snippet file-writer-test
-class HelloWorldFileWriterTest extends PHPUnit_Framework_TestCase {
+class HelloWorldFileWriterTest extends TestCase {
     /**
      * @test
      */

@@ -2,7 +2,9 @@
 
 namespace DesignPatterns\Factory\Step1;
 
-class Step1Test extends \PHPUnit_Framework_TestCase {
+use PHPUnit\Framework\TestCase;
+
+class Step1Test extends TestCase {
     /**
      * @test
      */

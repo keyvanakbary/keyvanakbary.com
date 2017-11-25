@@ -3,11 +3,11 @@
 namespace DesignPatterns\Factory\Step2;
 
 use DesignPatterns\Factory\Step1\Snack;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use Mockery;
 
 //snippet factory-test
-class VendingMachineTest extends \PHPUnit_Framework_TestCase {
+class VendingMachineTest extends TestCase {
     /**
      * @test
      */

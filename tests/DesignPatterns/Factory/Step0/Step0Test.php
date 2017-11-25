@@ -2,9 +2,9 @@
 
 namespace DesignPatterns\Factory\Step0;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class Step0Test extends PHPUnit_Framework_TestCase {
+class Step0Test extends TestCase {
     /**
      * @test
      */

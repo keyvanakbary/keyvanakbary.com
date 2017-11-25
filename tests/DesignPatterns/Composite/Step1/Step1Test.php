@@ -2,7 +2,9 @@
 
 namespace DesignPatterns\Composite\Step1;
 
-class CompositeTest extends \PHPUnit_Framework_TestCase {
+use PHPUnit\Framework\TestCase;
+
+class CompositeTest extends TestCase {
     /**
      * @test
      */

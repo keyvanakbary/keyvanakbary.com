@@ -3,8 +3,9 @@
 namespace DesignPatterns\Factory\Step2;
 
 use DesignPatterns\Factory\Step1\Snack;
+use PHPUnit\Framework\TestCase;
 
-class Step2Test extends \PHPUnit_Framework_TestCase {
+class Step2Test extends TestCase {
     /**
      * @test
      */
