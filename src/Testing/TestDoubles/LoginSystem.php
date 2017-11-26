@@ -9,8 +9,8 @@ class LoginSystem {
         $this->authorizer = $authorizer;
     }
 
-    public function login(string $username, string $password): string {
-        return $this->authorizer->authorize($username, $password) ?
-            'Hello ' . $username : 'Not logged in';
+    public function login(string $user, string $pass): string {
+        return $this->authorizer->authorize($user, $pass) ?
+            'Hello ' . $user : 'Not logged in';
     }
 }
