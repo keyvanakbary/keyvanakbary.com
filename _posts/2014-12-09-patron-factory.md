@@ -25,7 +25,7 @@ Podemos definir una interfaz común a todos los productos, y definirlos de la si
 
 {% include snippet.html file="design-patterns/factory/step1/snacks" %}
 
-Parece que ahora nuestro el código parece más claro y concisco.
+Parece que ahora nuestro código parece más claro y concisco.
 
 {% include snippet.html file="design-patterns/factory/step1/vending-machine" %}
 
