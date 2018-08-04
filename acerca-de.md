@@ -8,11 +8,13 @@ redirect_from:
 
 ## Y quien soy yo
 
-Hola, me llamo Keyvan Akbary y me _flipa_ esto de hacer Software. Lo considero una herramienta genial para resolver problemas, siempre como un medio y nunca como un fin en si mismo.
+Hola, me llamo Keyvan Akbary y me encanta esto de hacer Software. Lo considero una herramienta genial para resolver problemas, siempre como un medio y nunca como un fin en si mismo.
 
-Vivo en Londres y trabajo como _Lead Software Developer_ en [TransferWise](https://transferwise.com/). Aunque llevo muchos años en la industria considero que me queda mucho por descubrir, aprender y disfrutar. Si te sorprende mi soltura en la lengua de Cervantes, te aclaro que soy [Madrileño](http://en.wikipedia.org/wiki/Madrid). Mi nombre exótico es el resultado de tener un padre iraní.
+Vivo en Londres y trabajo como _Tech Lead_ en [TransferWise](https://transferwise.com/). Aunque ya unos cuantos años en la industria considero que me queda mucho por descubrir, aprender y disfrutar.
 
-Estoy más interesado en profundizar en los atemporales fundamentos Software que en digerir efímeras librerías de moda. Particularmente disfruto el profundizar sobre Programacion Orientada a Objetos, _Clean Code_, principios _SOLID_, _Craftsmanship_, Programacion Funcional, Patrones de Diseño y _Testing_.
+> Si te sorprende mi soltura en la lengua de Cervantes, te aclaro que soy [Madrileño](http://en.wikipedia.org/wiki/Madrid). Mi nombre exótico es el resultado de tener un padre iraní.
+
+Me interesa particularmente profundizar en los fundamentos Software. Disfruto especialmente con la Programacion Orientada a Objetos, _Clean Code_, Sistemas Distribuidos y escalabilidad, principios _SOLID_, Programacion Funcional, Patrones de Diseño y _Testing_.
 
 Defiendo el desarrollo ético y reconozco nuestro rol, impacto y responsabilidad como programadores en la sociedad que nos rodea.
 
@@ -29,7 +31,7 @@ Estoy convencido del potencial del paradigma funcional y si bien es cierto que n
     <a href="https://twitter.com/keyvanakbary" class="social twitter" title="Twitter"><i class="icon-twitter"></i></a>
     <a href="http://www.linkedin.com/in/keyvanakbary" class="social linkedin" title="Linkedin"><i class="icon-linkedin"></i></a>
     <a href="https://github.com/keyvanakbary" class="social github" title="Github"><i class="icon-github-alt"></i></a>
-    <script>document.write('<a href="\u006D\u0061'+'ilto\u003A\u006B\u0069wwi'+'\u0074\u006F\u0040gm\u0061\u0069\u006C'+'\u002E\u0063om" class="social mail" title="Email"><i class="icon-comments"></i></a>')</script>
+    <script>document.write('<a href="\u006D\u0061'+'ilto\u003Am\u0065\u0040\u006bey\u0076\u0061'+'\u006e\u0061\u006b\u0062\u0061\u0072\u0079\u002e'+'\u0063\u006fm" class="social mail" title="Email"><i class="icon-comments"></i></a>')</script>
 </div>
 
 <br><br>
