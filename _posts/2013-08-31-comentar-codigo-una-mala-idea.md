@@ -16,50 +16,37 @@ La causa mas común detrás de un comentario **es un código poco expresivo y po
 ### Explícalo con código
 En algunas ocasiones es difícil comunicar a través del código. Por desgracia, muchos programadores han llegado a la conclusión de que la única manera de solventarlo es comentándolo. Este hecho es completamente falso, como puedes ver ¿prefieres esto?
 
-```php?start_inline=1
-// Is a teenager
-if ($user->getAge() > 12 && $user->getAge() < 20)
-```
+
+{% include snippet.html file="comments/bad-comments/commented-teenager" %}
 
 ¿O esto?
 
-```php?start_inline=1
-if ($user->isTeenager())
-```
+{% include snippet.html file="comments/bad-comments/code-teenager" %}
 
 **Es mucho mas fácil e intuitivo expresar tu intención con código**. En la mayoría de los casos basta con crear una función con un nombre suficientemente descriptivo.
 
 ### Malos comentarios
+
 Por lo general, todos los comentarios entran dentro de esta categoría. La mayor parte son monólogos por parte del programador hacia si mismo.
 
 #### Ruido
-```php?start_inline=1
-// The name
-private $name;
 
-// The birth date;
-private $birthDate;
-
-// Default constructor
-public function __construct()
-```
+{% include snippet.html file="comments/bad-comments/noise" %}
 
 Algunas veces verás comentarios que no son otra cosa que ruido. Resaltan lo obvio y no proporcionan información útil.
 
 #### PHPDoc en APIs no públicas
-```php?start_inline=1
-/**
- * Sums two numbers
- * @param int num1
- * @param int num2
- * @return int
- */
-function sum($num1, $num2)
-```
+
+{% include snippet.html file="comments/bad-comments/phpdoc" %}
 
 Generar PHPDoc para clases y métodos internos a un sistema no es útil, además el formato PHPDoc es engorroso y hace poco más que añadir distracción.
 
+Además, desde [PHP 7.0](http://php.net/manual/en/functions.returning-values.php#functions.returning-values.type-declaration) y el soporte para declaración de tipos, su uso es obsoleto. La misma información se puede reescribir usando tipos
+
+{% include snippet.html file="comments/bad-comments/types" %}
+
 #### Código comentado
+
 Pocas prácticas son peores que comentar código. Simplemente no lo hagas.
 
 ```php?start_inline=1
@@ -74,7 +61,8 @@ if ($pos > 30) {
 Algunos leerán el código y no tendrán el coraje de borrarlo - *si está ahí será por algo ¿no?* - Gracias al control de versiones puedes recuperar el código así que no tengas miedo a eliminarlo.
 
 #### Marcas de posición
-Algunas veces a los programadores les gusta marcar ciertas posiciones del código.
+
+Algunas veces a los programadores nos gusta marcar ciertas posiciones del código.
 
 ```php?start_inline=1
 // Utility functions ///////////

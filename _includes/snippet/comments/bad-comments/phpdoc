@@ -1,0 +1,7 @@
+/**
+ * Sums two numbers
+ * @param int num1
+ * @param int num2
+ * @return int
+ */
+function sum($num1, $num2)

@@ -1,0 +1,2 @@
+// Is a teenager
+if ($user->getAge() > 12 && $user->getAge() < 20)

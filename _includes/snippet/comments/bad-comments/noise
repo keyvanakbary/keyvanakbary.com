@@ -1,0 +1,8 @@
+// The name
+private $name;
+
+// The birth date;
+private $birthDate;
+
+// Default constructor
+public function __construct()
