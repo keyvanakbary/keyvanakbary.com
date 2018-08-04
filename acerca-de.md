@@ -6,11 +6,11 @@ redirect_from:
     - /sobre-mi/
 ---
 
-## Y quien soy yo
+## Hola
 
-Hola, me llamo Keyvan Akbary y me encanta esto de hacer Software. Lo considero una herramienta genial para resolver problemas, siempre como un medio y nunca como un fin en si mismo.
+Me llamo Keyvan Akbary y me encanta esto de hacer Software. Lo considero una herramienta genial para resolver problemas, siempre como un medio y nunca como un fin en si mismo.
 
-Vivo en Londres y trabajo como _Tech Lead_ en [TransferWise](https://transferwise.com/). Aunque ya unos cuantos años en la industria considero que me queda mucho por descubrir, aprender y disfrutar.
+Vivo en Londres y trabajo como _Tech Lead_ en [TransferWise](https://transferwise.com/). Aunque ya llevo unos cuantos años en la industria considero que me queda mucho por descubrir, aprender y disfrutar.
 
 > Si te sorprende mi soltura en la lengua de Cervantes, te aclaro que soy [Madrileño](http://en.wikipedia.org/wiki/Madrid). Mi nombre exótico es el resultado de tener un padre iraní.
 
@@ -38,7 +38,7 @@ Estoy convencido del potencial del paradigma funcional y si bien es cierto que n
 
 ## Algunos apuntes
 
-### ¿Porqué en castellano?
+### ¿Por qué en castellano?
 A día de hoy, toda la información referente al software la puedes encontrar fácilmente en la red, en inglés. Saber inglés es fundamental para poder progresar y seguir aprendiendo. Por desgracia, no todo el mundo es consciente de la importancia de este hecho o no dispone de los medios o el tiempo para aprenderlo. A veces es más natural para un hispanohablante leer información en castellano. Se trata de acercar la información a todo el mundo.
 
 ### ¿Por qué PHP?
