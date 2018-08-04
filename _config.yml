@@ -9,5 +9,5 @@ kramdown:
 highlighter: rouge
 permalink: /:title/
 url: "http://keyvanakbary.com"
-description: Spaniard leaving in London. Tech Lead at TransferWise. Built Funddy. Author of “Domain-Driven Design in PHP” book.
+description: Tech Lead en TransferWise. Autor del libro “Domain-Driven Design in PHP”.
 excerpt_separator: <!--more-->
