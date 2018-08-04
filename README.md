@@ -1,6 +1,4 @@
-# Keyvan Akbary's Blog
-
-[![Build Status](https://secure.travis-ci.org/keyvanakbary/keyvanakbary.com.svg?branch=gh-pages)](http://travis-ci.org/keyvanakbary/keyvanakbary.com)
+# My Personal Blog [![Build Status](https://circleci.com/gh/keyvanakbary/keyvanakbary.com/tree/gh-pages.svg?style=shield)](https://circleci.com/gh/keyvanakbary/keyvanakbary.com/tree/gh-pages)
 
 Welcome to my personal blog, I really appreciate your interest! I usually write here about **software fundamentals**, **good practices** and **object oriented programming**. Feel free to add, fix or even remove information through fancy pull requests.
 
