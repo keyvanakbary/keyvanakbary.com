@@ -7,11 +7,12 @@ references:
     - {title: "Clean Code", url: "http://amzn.to/1ufbMlI"}
     - {title: "Agile Software Development", url: "http://amzn.to/1w8pZpY"}
     - {title: "Barbara Liskov Interview", url: "http://www.infoq.com/interviews/barbara-liskov"}
+    - {title: "Object Mentor on LSP", url: "https://web.archive.org/web/20150905081111/http://www.objectmentor.com/resources/articles/lsp.pdf"}
 ---
 
-El principio de sustitución de Liskov, o LSP (Liskov Substitution Principle), corresponde a la sigla L dentro de los 5 principios [SOLID](http://wikipedia.com/SOLID) para la programación orientada a objetos.
+El principio de sustitución de Liskov, o LSP (Liskov Substitution Principle), corresponde a la sigla L dentro de los 5 principios [SOLID](https://en.wikipedia.org/wiki/SOLID) para la programación orientada a objetos.
 
-> Los subtipos deberían poder ser reemplazables por sus tipos base
+> Los objetos de un programa deberían ser reemplazables por instancias de sus subtipos sin alterar el correcto funcionamiento del programa
 
 <!--more-->
 
@@ -21,6 +22,7 @@ El principio de sustitución de Liskov, o LSP (Liskov Substitution Principle), c
 La importancia de este principio se hace evidente cuando pensamos en las consecuencias de violarla. Piensa en que tenemos una función `f` que toma como argumento un tipo base `B`. Considera que el tipo `B` tiene un derivado `D`, que cuando se pasa a `f` se comporta de forma incorrecta. Es en este caso cuando podemos asegurar que `D` no puede reemplazar a `B`.
 
 ## Ejemplo de violación de LSP
+
 Considera el siguiente código como parte de una aplicación
 
 ```php?start_inline=1
