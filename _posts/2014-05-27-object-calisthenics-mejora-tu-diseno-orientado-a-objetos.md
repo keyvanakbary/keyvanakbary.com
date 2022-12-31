@@ -57,7 +57,7 @@ class Board {
         $rows = '';
 
         for ($rowNum = 0; $rowNum < 10; $rowNum++)
-            $result .= $this->collectRow($rowNum);
+            $rows .= $this->collectRow($rowNum);
 
         return $rows;
     }
